@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="">
+  <head>
+    <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+  <meta name="description" content="群分享--待整理归纳">
+
+
+
+
+  <meta name="keywords" content="iOS,群分享,待整理,">
+
+
+
+
+  <link rel="alternate" href="/use `atom.xml`" title="tomy’s  little world">
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=2.1.0">
+
+
+
+<link rel="canonical" href="http://tomys.win/2016/02/23/someShare/">
+
+
+<meta name="description" content="主要是记录一些群里分享的一些好用的轮子、第三方库或者文章书籍，方便以后用的时候查找，目前记录可能比较零散，等记录多了会进行分类归纳。
+1. 实现折线、柱状图、饼状图效果1.小非的LPLineChartView目前这个主要是实现了单线的折线图，但是实现的效果和性能非常棒，连傲娇的群主都挑不出什么错误呢。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="群分享--待整理归纳">
+<meta property="og:url" content="http://tomys.win/2016/02/23/someShare/index.html">
+<meta property="og:site_name" content="tomy’s  little world">
+<meta property="og:description" content="主要是记录一些群里分享的一些好用的轮子、第三方库或者文章书籍，方便以后用的时候查找，目前记录可能比较零散，等记录多了会进行分类归纳。
+1. 实现折线、柱状图、饼状图效果1.小非的LPLineChartView目前这个主要是实现了单线的折线图，但是实现的效果和性能非常棒，连傲娇的群主都挑不出什么错误呢。">
+<meta property="og:image" content="http://7xrmmr.com1.z0.glb.clouddn.com/chart4.png">
+<meta property="og:image" content="http://7xrmmr.com1.z0.glb.clouddn.com/kevin.png">
+<meta property="og:image" content="http://7xrmmr.com1.z0.glb.clouddn.com/iosChart.png">
+<meta property="og:image" content="http://7xrmmr.com1.z0.glb.clouddn.com/YKLineChartView.gif">
+<meta property="og:image" content="http://7xrmmr.com1.z0.glb.clouddn.com/%E4%BB%BFQQ%E2%80%9C%E9%BB%8F%E9%BB%8F%E2%80%9D%E6%95%88%E6%9E%9C.gif">
+<meta property="og:image" content="http://7xrmmr.com1.z0.glb.clouddn.com/%E8%B0%83%E8%AF%95%E7%95%8C%E9%9D%A2.gif">
+<meta property="og:updated_time" content="2016-06-29T04:55:50.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="群分享--待整理归纳">
+<meta name="twitter:description" content="主要是记录一些群里分享的一些好用的轮子、第三方库或者文章书籍，方便以后用的时候查找，目前记录可能比较零散，等记录多了会进行分类归纳。
+1. 实现折线、柱状图、饼状图效果1.小非的LPLineChartView目前这个主要是实现了单线的折线图，但是实现的效果和性能非常棒，连傲娇的群主都挑不出什么错误呢。">
+<meta name="twitter:image" content="http://7xrmmr.com1.z0.glb.clouddn.com/chart4.png">
+
+
+<link rel="stylesheet" type="text/css" href="/css/style.css?v=2.1.0">
+
+
+
+  <link rel="stylesheet" type="text/css" href="/lib/fancybox/jquery.fancybox.css">
+
+
+
+
+  
+
+
+
+    <title> 群分享--待整理归纳 · tomy’s  little world </title>
+  </head>
+
+  <body>
+    <div class="container">
+      <header id="header" class="header"><div class="logo-wrapper">
+  <a href="/." class="logo">tomy’s  little world</a>
+</div>
+
+<nav class="site-nav">
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item">
+          <a class="menu-item-link" href="/">
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item">
+          <a class="menu-item-link" href="/archives/">
+            Archives
+          </a>
+        </li>
+      
+        
+        <li class="menu-item">
+          <a class="menu-item-link" href="/tags">
+            Tags
+          </a>
+        </li>
+      
+        
+        <li class="menu-item">
+          <a class="menu-item-link" href="/about">
+            About
+          </a>
+        </li>
+      
+      
+        <li class="menu-search">
+          <form>
+            <i class="iconfont icon-search" id="open-search"></i>
+            <input type="text" class="search-input" id="search-input">
+            <i class="iconfont icon-close" id="close-search"></i>
+          </form>
+        </li>
+      
+    </ul>
+  
+</nav>
+
+<div class="mobile-navbar">
+  <div class="mobile-header">
+    <div class="mobile-header-logo">
+      <a href="/." class="logo">tomy’s  little world</a>
+    </div>
+
+    <div class="mobile-header-icon">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </div>
+  <nav class="mobile-menu">
+    
+      
+      <a class="mobile-menu-item" href="/">
+        Home
+      </a>
+    
+      
+      <a class="mobile-menu-item" href="/archives/">
+        Archives
+      </a>
+    
+      
+      <a class="mobile-menu-item" href="/tags">
+        Tags
+      </a>
+    
+      
+      <a class="mobile-menu-item" href="/about">
+        About
+      </a>
+    
+  </nav>
+</div>
+      </header>
+
+      <main id="main" class="main">
+        <div class="content-wrapper">
+          <div id="content" class="content">
+            
+  
+  <article class="post">
+    <header class="post-header">
+      <h1 class="post-title">
+        
+          群分享--待整理归纳
+        
+      </h1>
+
+      <div class="post-meta">
+        <span class="post-time">
+          Feb 22, 2016
+        </span>
+      </div>
+    </header>
+
+    
+      <div class="post-toc" id="post-toc">
+        <h2 class="post-toc-title">Contents</h2>
+        <div class="post-toc-content">
+          <ol class="toc"><li class="toc-item toc-level-5"><a class="toc-link" href="#1-实现折线、柱状图、饼状图效果"><span class="toc-text">1. 实现折线、柱状图、饼状图效果</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2-仿造QQ消除未读消息小红点效果"><span class="toc-text">2. 仿造QQ消除未读消息小红点效果</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#3-书籍推荐"><span class="toc-text">3. 书籍推荐</span></a></li></ol>
+        </div>
+      </div>
+    
+
+    <div class="post-content">
+      
+        <p>主要是记录一些群里分享的一些好用的轮子、第三方库或者文章书籍，方便以后用的时候查找，目前记录可能比较零散，等记录多了会进行分类归纳。</p>
+<h5 id="1-实现折线、柱状图、饼状图效果"><a href="#1-实现折线、柱状图、饼状图效果" class="headerlink" title="1. 实现折线、柱状图、饼状图效果"></a><strong>1. 实现折线、柱状图、饼状图效果</strong></h5><p>1.<a href="https://github.com/xiaofei86/LPLineChartView" target="_blank" rel="external">小非的LPLineChartView</a><br>目前这个主要是实现了单线的折线图，但是实现的效果和性能非常棒，连傲娇的群主都挑不出什么错误呢。<br><img src="http://7xrmmr.com1.z0.glb.clouddn.com/chart4.png" alt="小非的LPLineChartView图例"><br><a id="more"></a><br>2.<a href="https://github.com/kevinzhow/PNChart" target="_blank" rel="external">Kevin的LPLineChartView</a><br>这是kevinzhow写的，支持折线图、柱状图、圈状图、饼状图、散点图，还有各种动画效果。<br><img src="http://7xrmmr.com1.z0.glb.clouddn.com/kevin.png" alt="kevin的LPLineChartView图例"><br>3.<a href="https://github.com/danielgindi/ios-charts" target="_blank" rel="external">ios-charts</a><br>ios-charts 是由 Philipp Jahoda 建立的，是非常流行的 Android 库 MPAndroidChart 的 iOS 端口。有了这个库，你可以方便快捷地在应用中添加不同类型的图表。仅需寥寥几行代码，就可以制作出功能齐备、交互性强的图表，并且高度可定制。具体使用可以去github下载的demo，也可以参考这篇文章[如何在 Swift 语言下使用 iOS Charts API 制作漂亮图表]。<br>这个库的主要特点：</p>
+<ul>
+<li>8种不同的图表类型</li>
+<li>两轴缩放（带触摸手势，单独或捏缩放轴）</li>
+<li>拖动/平移（带触摸手势）</li>
+<li>联合图表（线 - ，柱状图，散射 - ，蜡烛stick-，空气泡）</li>
+<li>双（单独）轴</li>
+<li>定制的轴（x轴和y轴）</li>
+<li>突出显示值（可自定义的弹出窗口视图）</li>
+<li>保存图表相机辊/导出到PNG/ JPEG</li>
+<li>预定义的颜色模板</li>
+<li>图例（自动生成的，可定制）</li>
+<li>定制的轴（x轴和y轴）</li>
+<li>动画（建立动画，关于x轴和y轴）</li>
+<li>限制线（提供额外的信息，最大值，…）</li>
+<li>完全自定义（油漆，字体，传说，颜色，背景，手势，虚线，…）</li>
+<li>直接从Realm.io移动数据库的数据绘制<br>部分图例如下，感觉满足了大多数图表的功能。<br>(<a href="https://segmentfault.com/a/1190000003111508)。" target="_blank" rel="external">https://segmentfault.com/a/1190000003111508)。</a><br><img src="http://7xrmmr.com1.z0.glb.clouddn.com/iosChart.png" alt="ios-charts图例"><br>4.<a href="https://github.com/chenyk0317/YKLineChartView" target="_blank" rel="external">Stock chart framework for iOS K线图 分时图</a><br>这是<a href="http://chenyk.com/" target="_blank" rel="external">chenyk</a>写的iOS K线图 分时图。<br><img src="http://7xrmmr.com1.z0.glb.clouddn.com/YKLineChartView.gif" alt="Stock chart framework for iOS K线图 分时图 图例"></li>
+</ul>
+<h5 id="2-仿造QQ消除未读消息小红点效果"><a href="#2-仿造QQ消除未读消息小红点效果" class="headerlink" title="2. 仿造QQ消除未读消息小红点效果"></a><strong>2. 仿造QQ消除未读消息小红点效果</strong></h5><p>这是一个运用贝塞尔曲线画元球的Demo,实现QQ“一键退朝”的功能，不过对于作者目前的这种实现方式只达到了形似，肉哥说“这种不计算切线的都不合格”，所以想做这种效果的可以做个简单参考，若想达到QQ那种顺滑效果，还要做进一步优化。<br><img src="http://7xrmmr.com1.z0.glb.clouddn.com/%E4%BB%BFQQ%E2%80%9C%E9%BB%8F%E9%BB%8F%E2%80%9D%E6%95%88%E6%9E%9C.gif" alt="一个运用贝塞尔曲线画元球的Demo,实现QQ“一键退朝”的功能"><br><img src="http://7xrmmr.com1.z0.glb.clouddn.com/%E8%B0%83%E8%AF%95%E7%95%8C%E9%9D%A2.gif" alt="调试页面"></p>
+<h5 id="3-书籍推荐"><a href="#3-书籍推荐" class="headerlink" title="3. 书籍推荐"></a><strong>3. 书籍推荐</strong></h5><p>动画类：<a href="https://www.gitbook.com/book/zsisme/ios-/details" target="_blank" rel="external">ios核心动画高级技巧</a></p>
+<p>综合类：<a href="https://github.com/MISSAJJ/MISSAJJ_IOS_DEVELOPMENT_BOOK" target="_blank" rel="external">MISSAJJ琴瑟静听（ Swift 和 Objective-C ）iOS 开发项目电子书</a><br>这个一个善良勤劳而又聪慧的妈妈总结的iOS开发经验，分享的很多东西都值得学习，能让初学者提高效率。</p>
+<p>Swift类：<a href="http://c4ios.swift.gg/" target="_blank" rel="external">C4iOS中文版</a><br> C4iOS是 C4 团队编写的一本开发教程，详细介绍了一个完整项目的开发过程，非常适合新手学习。C4 是一个极具创造性的开发框架，可以使用简单的 API 实现各种交互和动画效果。SwiftGG拿到了 C4iOS 的翻译授权，经过半年的翻译和校对，发布了中文版。</p>
+<p> 面试类：<a href="http://hit-alibaba.github.io/interview/" target="_blank" rel="external">笔试面试知识整理</a><br> 总结面试中关于计算机基础知识、iOS开发、android开发常考到的一些知识点。</p>
+      
+    </div>
+
+    
+      <footer class="post-footer">
+        <div class="post-tags">
+          
+            <a href="/tags/iOS/">iOS</a>
+          
+            <a href="/tags/群分享/">群分享</a>
+          
+            <a href="/tags/待整理/">待整理</a>
+          
+        </div>
+
+        
+  <nav class="post-nav">
+    
+      <a class="prev" href="/2016/02/29/groupSummary160224/">
+        <i class="iconfont icon-left"></i>
+        <span class="prev-text nav-default">群讨论记录2</span>
+        <span class="prev-text nav-mobile">Prev</span>
+      </a>
+    
+    
+      <a class="next" href="/2016/02/22/groupSummary160215/">
+        <span class="next-text nav-default">群讨论记录1</span>
+        <span class="prev-text nav-mobile">Next</span>
+        <i class="iconfont icon-right"></i>
+      </a>
+    
+  </nav>
+
+      </footer>
+    
+  </article>
+
+
+          </div>
+          
+  <div class="comments" id="comments">
+    
+      <div id="disqus_thread">
+        <noscript>
+          Please enable JavaScript to view the
+          <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a>
+        </noscript>
+      </div>
+    
+  </div>
+
+        </div>  
+      </main>
+
+      <footer id="footer" class="footer">
+  <div class="social-links">
+    
+      
+        
+          <a href="mailto:535303865@qq.com" class="iconfont icon-email" title="email"></a>
+        
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+        
+          <a href="http://weibo.com/tomytianqi" class="iconfont icon-weibo" title="weibo"></a>
+        
+      
+    
+      
+    
+    
+    
+      <a href="/use `atom.xml`" class="iconfont icon-rss" title="rss"></a>
+    
+  </div>
+
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://hexo.io/">Hexo</a>
+  </span>
+  
+  <span class="theme-info">
+    Theme - 
+    <a class="theme-link" href="https://github.com/ahonn/hexo-theme-even">Even</a>
+  </span>
+
+  <span class="copyright-year">
+    
+    &copy; 
+     
+      2016 - 
+    
+    2017
+
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">tomy</span>
+  </span>
+</div>
+      </footer>
+
+      <div class="back-to-top" id="back-to-top">
+        <i class="iconfont icon-up"></i>
+      </div>
+    </div>
+
+    
+
+  <script type="text/javascript">
+    var disqus_config = function () {
+        this.page.url = 'http://tomys.win/2016/02/23/someShare/';
+        this.page.identifier = '2016/02/23/someShare/';
+        this.page.title = '群分享--待整理归纳';
+    };
+    (function() {
+    var d = document, s = d.createElement('script');
+
+    s.src = '//tomy.disqus.com/embed.js';
+
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+    })();  
+  </script>
+
+
+    
+  
+
+
+
+
+
+  
+    <script type="text/javascript" src="/lib/jquery/jquery-3.1.1.min.js"></script>
+  
+
+  
+    <script type="text/javascript" src="/lib/fancybox/jquery.fancybox.pack.js"></script>
+  
+
+    <script type="text/javascript" src="/js/src/even.js?v=2.1.0"></script>
+<script type="text/javascript" src="/js/src/bootstrap.js?v=2.1.0"></script>
+
+  </body>
+</html>

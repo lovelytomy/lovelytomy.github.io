@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+
+    
+  <url>
+    <loc>http://tomys.win/2017/01/04/hello-world/</loc>
+    <lastmod>2017-01-04T11:12:40.000Z</lastmod>
+    <data>
+        <display>
+        <title>Hello World</title>
+        <pubTime>2017-01-04T11:12:40.000Z</pubTime>
+        
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://tomys.win/2017/01/05/%E5%B9%B4%E5%A4%9C%E9%A5%AD%E8%8F%9C%E5%8D%95/</loc>
+    <lastmod>2017-01-04T08:36:16.000Z</lastmod>
+    <data>
+        <display>
+        <title>年夜饭菜单</title>
+        <pubTime>2017-01-04T16:15:00.000Z</pubTime>
+        
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://tomys.win/2016/04/26/UIAlertView4KeyBoard/</loc>
+    <lastmod>2017-01-03T07:31:28.000Z</lastmod>
+    <data>
+        <display>
+        <title>iOS8＋ UIAlertView pop/push页面后，键盘闪一下的问题</title>
+        <pubTime>2016-04-26T12:03:00.000Z</pubTime>
+        
+        <tag>iOS</tag>
+         
+        <tag>总结</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://tomys.win/2016/11/02/bugs/</loc>
+    <lastmod>2017-01-03T06:20:14.000Z</lastmod>
+    <data>
+        <display>
+        <title>关于ld: embedded dylibs/frameworks are only supported on iOS 8.0 and later (@rpath/XXX.framework/XXX) for architecture x86_64 错误解决</title>
+        <pubTime>2016-11-02T12:01:00.000Z</pubTime>
+        
+        <tag>iOS</tag>
+         
+        <tag>bugs</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://tomys.win/2016/03/08/iOSTools/</loc>
+    <lastmod>2016-07-08T09:57:11.000Z</lastmod>
+    <data>
+        <display>
+        <title>iOS开发常用插件和工具总结</title>
+        <pubTime>2016-03-08T12:03:00.000Z</pubTime>
+        
+        <tag>iOS</tag>
+         
+        <tag>总结</tag>
+         
+        <tag>插件</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://tomys.win/2016/03/22/iOS_CustomFont/</loc>
+    <lastmod>2016-06-29T05:01:26.000Z</lastmod>
+    <data>
+        <display>
+        <title>iOS使用自定义字体</title>
+        <pubTime>2016-03-22T00:03:00.000Z</pubTime>
+        
+        <tag>iOS</tag>
+         
+        <tag>字体</tag>
+         
+        <tag>随笔</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://tomys.win/2016/02/23/someShare/</loc>
+    <lastmod>2016-06-29T04:55:50.000Z</lastmod>
+    <data>
+        <display>
+        <title>群分享--待整理归纳</title>
+        <pubTime>2016-02-22T16:03:00.000Z</pubTime>
+        
+        <tag>iOS</tag>
+         
+        <tag>群分享</tag>
+         
+        <tag>待整理</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://tomys.win/2016/03/03/douyuVideo/</loc>
+    <lastmod>2016-06-14T06:44:41.000Z</lastmod>
+    <data>
+        <display>
+        <title>斗鱼视频及相关博主信息</title>
+        <pubTime>2016-03-03T00:03:00.000Z</pubTime>
+        
+        <tag>iOS</tag>
+         
+        <tag>视频</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://tomys.win/2016/05/16/groupSummary160515/</loc>
+    <lastmod>2016-05-15T05:46:27.000Z</lastmod>
+    <data>
+        <display>
+        <title>群讨论整理160515</title>
+        <pubTime>2016-05-15T16:03:00.000Z</pubTime>
+        
+        <tag>iOS</tag>
+         
+        <tag>群记录</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://tomys.win/2016/02/22/groupSummary160215/</loc>
+    <lastmod>2016-05-15T04:24:04.000Z</lastmod>
+    <data>
+        <display>
+        <title>群讨论记录1</title>
+        <pubTime>2016-02-21T16:03:00.000Z</pubTime>
+        
+        <tag>iOS</tag>
+         
+        <tag>群记录</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://tomys.win/2016/02/29/groupSummary160224/</loc>
+    <lastmod>2016-04-02T15:59:32.000Z</lastmod>
+    <data>
+        <display>
+        <title>群讨论记录2</title>
+        <pubTime>2016-02-28T16:03:00.000Z</pubTime>
+        
+        <tag>iOS</tag>
+         
+        <tag>群记录</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+</urlset>

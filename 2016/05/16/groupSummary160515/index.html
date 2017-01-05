@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="">
+  <head>
+    <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+  <meta name="description" content="群讨论整理160515">
+
+
+
+
+  <meta name="keywords" content="iOS,群记录,">
+
+
+
+
+  <link rel="alternate" href="/use `atom.xml`" title="tomy’s  little world">
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=2.1.0">
+
+
+
+<link rel="canonical" href="http://tomys.win/2016/05/16/groupSummary160515/">
+
+
+<meta name="description" content="记录了群里2016-05-09至2016-05-15讨论的一些问题，如有错误还望告知。
+
+1. 怎样获取ipa的Image Assets中的图片素材。
+问题描述：获取ipa的图片素材, 包内容中图片特别少,  大部分都是nib结尾的文件, 怎么才能获取全部的图片呢
+问题解决：工具1:参考简书文章（iOS）仿App第一步：获取App素材；工具2:github中有一个开源的获取Image Asset">
+<meta property="og:type" content="article">
+<meta property="og:title" content="群讨论整理160515">
+<meta property="og:url" content="http://tomys.win/2016/05/16/groupSummary160515/index.html">
+<meta property="og:site_name" content="tomy’s  little world">
+<meta property="og:description" content="记录了群里2016-05-09至2016-05-15讨论的一些问题，如有错误还望告知。
+
+1. 怎样获取ipa的Image Assets中的图片素材。
+问题描述：获取ipa的图片素材, 包内容中图片特别少,  大部分都是nib结尾的文件, 怎么才能获取全部的图片呢
+问题解决：工具1:参考简书文章（iOS）仿App第一步：获取App素材；工具2:github中有一个开源的获取Image Asset">
+<meta property="og:image" content="http://7xrmmr.com1.z0.glb.clouddn.com/label.png">
+<meta property="og:image" content="http://7xrmmr.com1.z0.glb.clouddn.com/btn_touch.jpg">
+<meta property="og:image" content="http://7xrmmr.com1.z0.glb.clouddn.com/btn_touch_right.jpg">
+<meta property="og:image" content="http://7xrmmr.com1.z0.glb.clouddn.com/MPMoviePlayerControllerURL.png">
+<meta property="og:updated_time" content="2016-05-15T05:46:27.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="群讨论整理160515">
+<meta name="twitter:description" content="记录了群里2016-05-09至2016-05-15讨论的一些问题，如有错误还望告知。
+
+1. 怎样获取ipa的Image Assets中的图片素材。
+问题描述：获取ipa的图片素材, 包内容中图片特别少,  大部分都是nib结尾的文件, 怎么才能获取全部的图片呢
+问题解决：工具1:参考简书文章（iOS）仿App第一步：获取App素材；工具2:github中有一个开源的获取Image Asset">
+<meta name="twitter:image" content="http://7xrmmr.com1.z0.glb.clouddn.com/label.png">
+
+
+<link rel="stylesheet" type="text/css" href="/css/style.css?v=2.1.0">
+
+
+
+  <link rel="stylesheet" type="text/css" href="/lib/fancybox/jquery.fancybox.css">
+
+
+
+
+  
+
+
+
+    <title> 群讨论整理160515 · tomy’s  little world </title>
+  </head>
+
+  <body>
+    <div class="container">
+      <header id="header" class="header"><div class="logo-wrapper">
+  <a href="/." class="logo">tomy’s  little world</a>
+</div>
+
+<nav class="site-nav">
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item">
+          <a class="menu-item-link" href="/">
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item">
+          <a class="menu-item-link" href="/archives/">
+            Archives
+          </a>
+        </li>
+      
+        
+        <li class="menu-item">
+          <a class="menu-item-link" href="/tags">
+            Tags
+          </a>
+        </li>
+      
+        
+        <li class="menu-item">
+          <a class="menu-item-link" href="/about">
+            About
+          </a>
+        </li>
+      
+      
+        <li class="menu-search">
+          <form>
+            <i class="iconfont icon-search" id="open-search"></i>
+            <input type="text" class="search-input" id="search-input">
+            <i class="iconfont icon-close" id="close-search"></i>
+          </form>
+        </li>
+      
+    </ul>
+  
+</nav>
+
+<div class="mobile-navbar">
+  <div class="mobile-header">
+    <div class="mobile-header-logo">
+      <a href="/." class="logo">tomy’s  little world</a>
+    </div>
+
+    <div class="mobile-header-icon">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </div>
+  <nav class="mobile-menu">
+    
+      
+      <a class="mobile-menu-item" href="/">
+        Home
+      </a>
+    
+      
+      <a class="mobile-menu-item" href="/archives/">
+        Archives
+      </a>
+    
+      
+      <a class="mobile-menu-item" href="/tags">
+        Tags
+      </a>
+    
+      
+      <a class="mobile-menu-item" href="/about">
+        About
+      </a>
+    
+  </nav>
+</div>
+      </header>
+
+      <main id="main" class="main">
+        <div class="content-wrapper">
+          <div id="content" class="content">
+            
+  
+  <article class="post">
+    <header class="post-header">
+      <h1 class="post-title">
+        
+          群讨论整理160515
+        
+      </h1>
+
+      <div class="post-meta">
+        <span class="post-time">
+          May 15, 2016
+        </span>
+      </div>
+    </header>
+
+    
+      <div class="post-toc" id="post-toc">
+        <h2 class="post-toc-title">Contents</h2>
+        <div class="post-toc-content">
+          <ol class="toc"><li class="toc-item toc-level-5"><a class="toc-link" href="#1-怎样获取ipa的Image-Assets中的图片素材。"><span class="toc-text">1. 怎样获取ipa的Image Assets中的图片素材。</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2-label文字的左右对齐"><span class="toc-text">2. label文字的左右对齐</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#3-一个罕见的自作导致debug版本正常，上线（release）后异常的做法。"><span class="toc-text">3. 一个罕见的自作导致debug版本正常，上线（release）后异常的做法。</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#4-用MPMoviePlayerController写的播放器-在系统版本-8-1-8-2播放时崩溃，其他版本没有问题。"><span class="toc-text">4. 用MPMoviePlayerController写的播放器 在系统版本 8.1, 8.2播放时崩溃，其他版本没有问题。</span></a></li></ol>
+        </div>
+      </div>
+    
+
+    <div class="post-content">
+      
+        <ul>
+<li>记录了群里2016-05-09至2016-05-15讨论的一些问题，如有错误还望告知。</li>
+</ul>
+<h5 id="1-怎样获取ipa的Image-Assets中的图片素材。"><a href="#1-怎样获取ipa的Image-Assets中的图片素材。" class="headerlink" title="1. 怎样获取ipa的Image Assets中的图片素材。"></a>1. 怎样获取ipa的Image Assets中的图片素材。</h5><ul>
+<li>问题描述：获取ipa的图片素材, 包内容中图片特别少,  大部分都是nib结尾的文件, 怎么才能获取全部的图片呢</li>
+<li>问题解决：<br><code>工具1</code>:参考简书文章<a href="http://www.jianshu.com/p/1b817affc305" target="_blank" rel="external">（iOS）仿App第一步：获取App素材</a>；<br><code>工具2</code>:github中有一个开源的获取Image Assets图片工具<a href="https://github.com/devcxm/iOS-Images-Extractor" target="_blank" rel="external">devcxm/iOS-Images-Extractor</a><a id="more"></a>
+<h5 id="2-label文字的左右对齐"><a href="#2-label文字的左右对齐" class="headerlink" title="2. label文字的左右对齐"></a>2. label文字的左右对齐</h5></li>
+<li>问题描述：想实现label左右对齐，现在初步实现，但是设置两端对齐后，遇见图1的bug。<br><img src="http://7xrmmr.com1.z0.glb.clouddn.com/label.png" alt="图1"></li>
+<li>问题解决：<figure class="highlight mipsasm"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">NSMutableAttributedString *string = [[NSMutableAttributedString 	alloc]initWithString:model.commentContent]<span class="comment">;</span></div><div class="line">   NSMutableParagraphStyle *style = [[NSMutableParagraphStyle alloc]init]<span class="comment">;</span></div><div class="line">   style.alignment = NSTextAlignmentJustified<span class="comment">;</span></div><div class="line">   style.firstLineHeadIndent = <span class="number">0</span>.<span class="number">1</span><span class="comment">;</span></div><div class="line">   style.lineBreakMode = NSLineBreakByCharWrapping<span class="comment">;</span></div><div class="line">   NSDictionary *<span class="keyword">dic </span>= @&#123;NSParagraphStyleAttributeName:style&#125;<span class="comment">;</span></div><div class="line">   [string setAttributes:<span class="keyword">dic </span>range:NSMakeRange(<span class="number">0</span>, string.length-1)]<span class="comment">;</span></div><div class="line">   self.commentContent.attributedText = string<span class="comment">;</span></div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h5 id="3-一个罕见的自作导致debug版本正常，上线（release）后异常的做法。"><a href="#3-一个罕见的自作导致debug版本正常，上线（release）后异常的做法。" class="headerlink" title="3. 一个罕见的自作导致debug版本正常，上线（release）后异常的做法。"></a>3. 一个罕见的自作导致debug版本正常，上线（release）后异常的做法。</h5><ul>
+<li>问题描述：为了限制UIButton的多次点击，给UIButton加了个分类，写法如图1，结果测试(debug模式)时没问题，但是发布(release)后,button点击一下就失效了，必须程序重启之后才可以点击。<br><img src="http://7xrmmr.com1.z0.glb.clouddn.com/btn_touch.jpg" alt="错误示范"></li>
+<li>问题原因：问题提出者自己找到原因，因为下面注释的方法传不过去那个@(NO)，传过去的是 -1638297424 这个东西 用下面的方法就好了：<br><img src="http://7xrmmr.com1.z0.glb.clouddn.com/btn_touch_right.jpg" alt="解决方法"></li>
+</ul>
+<h5 id="4-用MPMoviePlayerController写的播放器-在系统版本-8-1-8-2播放时崩溃，其他版本没有问题。"><a href="#4-用MPMoviePlayerController写的播放器-在系统版本-8-1-8-2播放时崩溃，其他版本没有问题。" class="headerlink" title="4. 用MPMoviePlayerController写的播放器 在系统版本 8.1, 8.2播放时崩溃，其他版本没有问题。"></a>4. 用MPMoviePlayerController写的播放器 在系统版本 8.1, 8.2播放时崩溃，其他版本没有问题。</h5><ul>
+<li>问题描述：用MPMoviePlayerController写的播放器 在系统版本 8.1 8.2播放时崩溃，其他版本没有问题。</li>
+<li>问题解决：提问者自己在谷歌搜到答案，虽然初始化时设置了内容的URL，但是在8.1，8.2的系统上没次播放时都要重新再设置一次才可以。<br><img src="http://7xrmmr.com1.z0.glb.clouddn.com/MPMoviePlayerControllerURL.png" alt="MPMoviePlayerController"></li>
+</ul>
+      
+    </div>
+
+    
+      <footer class="post-footer">
+        <div class="post-tags">
+          
+            <a href="/tags/iOS/">iOS</a>
+          
+            <a href="/tags/群记录/">群记录</a>
+          
+        </div>
+
+        
+  <nav class="post-nav">
+    
+      <a class="prev" href="/2016/11/02/bugs/">
+        <i class="iconfont icon-left"></i>
+        <span class="prev-text nav-default">关于ld: embedded dylibs/frameworks are only supported on iOS 8.0 and later (@rpath/XXX.framework/XXX) for architecture x86_64 错误解决</span>
+        <span class="prev-text nav-mobile">Prev</span>
+      </a>
+    
+    
+      <a class="next" href="/2016/04/26/UIAlertView4KeyBoard/">
+        <span class="next-text nav-default">iOS8＋ UIAlertView pop/push页面后，键盘闪一下的问题</span>
+        <span class="prev-text nav-mobile">Next</span>
+        <i class="iconfont icon-right"></i>
+      </a>
+    
+  </nav>
+
+      </footer>
+    
+  </article>
+
+
+          </div>
+          
+  <div class="comments" id="comments">
+    
+      <div id="disqus_thread">
+        <noscript>
+          Please enable JavaScript to view the
+          <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a>
+        </noscript>
+      </div>
+    
+  </div>
+
+        </div>  
+      </main>
+
+      <footer id="footer" class="footer">
+  <div class="social-links">
+    
+      
+        
+          <a href="mailto:535303865@qq.com" class="iconfont icon-email" title="email"></a>
+        
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+        
+          <a href="http://weibo.com/tomytianqi" class="iconfont icon-weibo" title="weibo"></a>
+        
+      
+    
+      
+    
+    
+    
+      <a href="/use `atom.xml`" class="iconfont icon-rss" title="rss"></a>
+    
+  </div>
+
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://hexo.io/">Hexo</a>
+  </span>
+  
+  <span class="theme-info">
+    Theme - 
+    <a class="theme-link" href="https://github.com/ahonn/hexo-theme-even">Even</a>
+  </span>
+
+  <span class="copyright-year">
+    
+    &copy; 
+     
+      2016 - 
+    
+    2017
+
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">tomy</span>
+  </span>
+</div>
+      </footer>
+
+      <div class="back-to-top" id="back-to-top">
+        <i class="iconfont icon-up"></i>
+      </div>
+    </div>
+
+    
+
+  <script type="text/javascript">
+    var disqus_config = function () {
+        this.page.url = 'http://tomys.win/2016/05/16/groupSummary160515/';
+        this.page.identifier = '2016/05/16/groupSummary160515/';
+        this.page.title = '群讨论整理160515';
+    };
+    (function() {
+    var d = document, s = d.createElement('script');
+
+    s.src = '//tomy.disqus.com/embed.js';
+
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+    })();  
+  </script>
+
+
+    
+  
+
+
+
+
+
+  
+    <script type="text/javascript" src="/lib/jquery/jquery-3.1.1.min.js"></script>
+  
+
+  
+    <script type="text/javascript" src="/lib/fancybox/jquery.fancybox.pack.js"></script>
+  
+
+    <script type="text/javascript" src="/js/src/even.js?v=2.1.0"></script>
+<script type="text/javascript" src="/js/src/bootstrap.js?v=2.1.0"></script>
+
+  </body>
+</html>

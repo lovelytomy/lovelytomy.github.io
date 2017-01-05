@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="">
+  <head>
+    <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+  <meta name="description" content="关于ld: embedded dylibs/frameworks are only supported on iOS 8.0 and later (@rpath/XXX.framework/XXX) for architecture x86_64 错误解决">
+
+
+
+
+  <meta name="keywords" content="iOS,bugs,">
+
+
+
+
+  <link rel="alternate" href="/use `atom.xml`" title="tomy’s  little world">
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=2.1.0">
+
+
+
+<link rel="canonical" href="http://tomys.win/2016/11/02/bugs/">
+
+
+<meta name="description" content="随着iOS10的发布，越来越少人用iOS7.x的系统了，再加上xcode8现在也没有iOS7系列的模拟器可以调试，所以最近升级的一款应用最低支持提升到了8.0。可是发布没几天就不断的有家长打电话声称应用安装不上，大部分都是因为他们的手机是iOS7.x的系统，所以无奈只能将最低支持降低到7.0。可是改完应用的PROJECT和TARGETS却报错了。1ld: embedded dylibs/frame">
+<meta property="og:type" content="article">
+<meta property="og:title" content="关于ld: embedded dylibs/frameworks are only supported on iOS 8.0 and later (@rpath/XXX.framework/XXX) for architecture x86_64 错误解决">
+<meta property="og:url" content="http://tomys.win/2016/11/02/bugs/index.html">
+<meta property="og:site_name" content="tomy’s  little world">
+<meta property="og:description" content="随着iOS10的发布，越来越少人用iOS7.x的系统了，再加上xcode8现在也没有iOS7系列的模拟器可以调试，所以最近升级的一款应用最低支持提升到了8.0。可是发布没几天就不断的有家长打电话声称应用安装不上，大部分都是因为他们的手机是iOS7.x的系统，所以无奈只能将最低支持降低到7.0。可是改完应用的PROJECT和TARGETS却报错了。1ld: embedded dylibs/frame">
+<meta property="og:image" content="http://7xrmmr.com1.z0.glb.clouddn.com/tomys/project1.jpg">
+<meta property="og:image" content="http://7xrmmr.com1.z0.glb.clouddn.com/tomys/target1.jpg">
+<meta property="og:image" content="http://7xrmmr.com1.z0.glb.clouddn.com/tomys/Pods_xcodeproj1.jpg">
+<meta property="og:image" content="http://7xrmmr.com1.z0.glb.clouddn.com/tomys/Pods_xcodeproj2.jpg">
+<meta property="og:updated_time" content="2017-01-03T06:20:14.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="关于ld: embedded dylibs/frameworks are only supported on iOS 8.0 and later (@rpath/XXX.framework/XXX) for architecture x86_64 错误解决">
+<meta name="twitter:description" content="随着iOS10的发布，越来越少人用iOS7.x的系统了，再加上xcode8现在也没有iOS7系列的模拟器可以调试，所以最近升级的一款应用最低支持提升到了8.0。可是发布没几天就不断的有家长打电话声称应用安装不上，大部分都是因为他们的手机是iOS7.x的系统，所以无奈只能将最低支持降低到7.0。可是改完应用的PROJECT和TARGETS却报错了。1ld: embedded dylibs/frame">
+<meta name="twitter:image" content="http://7xrmmr.com1.z0.glb.clouddn.com/tomys/project1.jpg">
+
+
+<link rel="stylesheet" type="text/css" href="/css/style.css?v=2.1.0">
+
+
+
+  <link rel="stylesheet" type="text/css" href="/lib/fancybox/jquery.fancybox.css">
+
+
+
+
+  
+
+
+
+    <title> 关于ld: embedded dylibs/frameworks are only supported on iOS 8.0 and later (@rpath/XXX.framework/XXX) for architecture x86_64 错误解决 · tomy’s  little world </title>
+  </head>
+
+  <body>
+    <div class="container">
+      <header id="header" class="header"><div class="logo-wrapper">
+  <a href="/." class="logo">tomy’s  little world</a>
+</div>
+
+<nav class="site-nav">
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item">
+          <a class="menu-item-link" href="/">
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item">
+          <a class="menu-item-link" href="/archives/">
+            Archives
+          </a>
+        </li>
+      
+        
+        <li class="menu-item">
+          <a class="menu-item-link" href="/tags">
+            Tags
+          </a>
+        </li>
+      
+        
+        <li class="menu-item">
+          <a class="menu-item-link" href="/about">
+            About
+          </a>
+        </li>
+      
+      
+        <li class="menu-search">
+          <form>
+            <i class="iconfont icon-search" id="open-search"></i>
+            <input type="text" class="search-input" id="search-input">
+            <i class="iconfont icon-close" id="close-search"></i>
+          </form>
+        </li>
+      
+    </ul>
+  
+</nav>
+
+<div class="mobile-navbar">
+  <div class="mobile-header">
+    <div class="mobile-header-logo">
+      <a href="/." class="logo">tomy’s  little world</a>
+    </div>
+
+    <div class="mobile-header-icon">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </div>
+  <nav class="mobile-menu">
+    
+      
+      <a class="mobile-menu-item" href="/">
+        Home
+      </a>
+    
+      
+      <a class="mobile-menu-item" href="/archives/">
+        Archives
+      </a>
+    
+      
+      <a class="mobile-menu-item" href="/tags">
+        Tags
+      </a>
+    
+      
+      <a class="mobile-menu-item" href="/about">
+        About
+      </a>
+    
+  </nav>
+</div>
+      </header>
+
+      <main id="main" class="main">
+        <div class="content-wrapper">
+          <div id="content" class="content">
+            
+  
+  <article class="post">
+    <header class="post-header">
+      <h1 class="post-title">
+        
+          关于ld: embedded dylibs/frameworks are only supported on iOS 8.0 and later (@rpath/XXX.framework/XXX) for architecture x86_64 错误解决
+        
+      </h1>
+
+      <div class="post-meta">
+        <span class="post-time">
+          Nov 2, 2016
+        </span>
+      </div>
+    </header>
+
+    
+      <div class="post-toc" id="post-toc">
+        <h2 class="post-toc-title">Contents</h2>
+        <div class="post-toc-content">
+          <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-首先修改项目的PROJECT和TARGET"><span class="toc-text">1. 首先修改项目的PROJECT和TARGET</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-修改Pods的PROJECT"><span class="toc-text">2. 修改Pods的PROJECT</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-修改Pods的各个TARGETS"><span class="toc-text">3. 修改Pods的各个TARGETS</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-注意事项"><span class="toc-text">4. 注意事项</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#5-补充"><span class="toc-text">5. 补充</span></a></li></ol>
+        </div>
+      </div>
+    
+
+    <div class="post-content">
+      
+        <p>随着iOS10的发布，越来越少人用iOS7.x的系统了，再加上xcode8现在也没有iOS7系列的模拟器可以调试，所以最近升级的一款应用最低支持提升到了8.0。可是发布没几天就不断的有家长打电话声称应用安装不上，大部分都是因为他们的手机是iOS7.x的系统，所以无奈只能将最低支持降低到7.0。可是改完应用的PROJECT和TARGETS却报错了。<br><figure class="highlight less"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">ld</span>: embedded dylibs/frameworks are only supported on iOS <span class="number">8.0</span> and later (<span class="variable">@rpath</span>/AFNetworking.framework/AFNetworking) for architecture x86_64</div></pre></td></tr></table></figure></p>
+<p>可是不应该啊，我pod中的AFNetworking版本是2.6.3是支持iOS7的为什么报错呢？<br>几经谷歌搜索看到论坛中有人解决了(<a href="http://www.cocoachina.com/bbs/read.php?tid=1677683" target="_blank" rel="external">cocoapods 添加的库部署到iOS7.0上报错</a>),但是我并不明白这种解决方法是什么意思，最后请教群里的大牛解决了，所以写出详细解决方法，方便日后有人遇到相同问题。<br>特此感谢大神AK。</p>
+<a id="more"></a>
+<p>其实该问题的主要原因是Pods中的PROJECT和各个TARGETS版本与我们项目的PROJECT和各个TARGET版本不一致造成的。为了兼容低版本我们通常不会忘记修改项目的PROJECT和各个TARGET，但是Pods中的各个版本不一定会自动跟着改变，尤其是现在Xcode8默认最低版本是ios8.0，所以Pods的各版本最低是8.0才会造成这个错误，需要我们手动改成7.0。</p>
+<h4 id="1-首先修改项目的PROJECT和TARGET"><a href="#1-首先修改项目的PROJECT和TARGET" class="headerlink" title="1. 首先修改项目的PROJECT和TARGET"></a><strong>1. 首先修改项目的PROJECT和TARGET</strong></h4><p><img src="http://7xrmmr.com1.z0.glb.clouddn.com/tomys/project1.jpg" alt="修改项目的PROJECT"><br><img src="http://7xrmmr.com1.z0.glb.clouddn.com/tomys/target1.jpg" alt="修改项目的TARGET"></p>
+<h4 id="2-修改Pods的PROJECT"><a href="#2-修改Pods的PROJECT" class="headerlink" title="2. 修改Pods的PROJECT"></a><strong>2. 修改Pods的PROJECT</strong></h4><p><img src="http://7xrmmr.com1.z0.glb.clouddn.com/tomys/Pods_xcodeproj1.jpg" alt="修改Pods的PROJECT"></p>
+<h4 id="3-修改Pods的各个TARGETS"><a href="#3-修改Pods的各个TARGETS" class="headerlink" title="3. 修改Pods的各个TARGETS"></a><strong>3. 修改Pods的各个TARGETS</strong></h4><p>pods中有很多targets，所以需要一个个修改，这里以第一个AFNetworking为例。<br><img src="http://7xrmmr.com1.z0.glb.clouddn.com/tomys/Pods_xcodeproj2.jpg" alt="修改Pods的TARGETS"></p>
+<h4 id="4-注意事项"><a href="#4-注意事项" class="headerlink" title="4. 注意事项"></a><strong>4. 注意事项</strong></h4><p>这样修改其实并不完美，因为当你重新pod install 或者pod update的时候，pods中的这些project 和targets就会重新变回8.0，毕竟Xcode8最低支持的是iOS8.0的系统，所以还是要重复2和3的操作，不知道有没有一劳永逸的方法，目前只能先这么改。</p>
+<h4 id="5-补充"><a href="#5-补充" class="headerlink" title="5. 补充"></a><strong>5. 补充</strong></h4><p>后来找到了一个完美的解决办法，就是按照文章<a href="http://blog.csdn.net/CodingFire/article/details/52638265" target="_blank" rel="external"><a href="http://blog.csdn.net/codingfire/article/details/52638265" target="_blank" rel="external">Xcode8兼容iOS7手记</a></a>中的方法，使Xcode最低支持到7.0，这样每次pod install或者pod update的时候pods中的这些project 和targets不会重新变回8.0。</p>
+      
+    </div>
+
+    
+      <footer class="post-footer">
+        <div class="post-tags">
+          
+            <a href="/tags/iOS/">iOS</a>
+          
+            <a href="/tags/bugs/">bugs</a>
+          
+        </div>
+
+        
+  <nav class="post-nav">
+    
+      <a class="prev" href="/2017/01/04/hello-world/">
+        <i class="iconfont icon-left"></i>
+        <span class="prev-text nav-default">Hello World</span>
+        <span class="prev-text nav-mobile">Prev</span>
+      </a>
+    
+    
+      <a class="next" href="/2016/05/16/groupSummary160515/">
+        <span class="next-text nav-default">群讨论整理160515</span>
+        <span class="prev-text nav-mobile">Next</span>
+        <i class="iconfont icon-right"></i>
+      </a>
+    
+  </nav>
+
+      </footer>
+    
+  </article>
+
+
+          </div>
+          
+  <div class="comments" id="comments">
+    
+      <div id="disqus_thread">
+        <noscript>
+          Please enable JavaScript to view the
+          <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a>
+        </noscript>
+      </div>
+    
+  </div>
+
+        </div>  
+      </main>
+
+      <footer id="footer" class="footer">
+  <div class="social-links">
+    
+      
+        
+          <a href="mailto:535303865@qq.com" class="iconfont icon-email" title="email"></a>
+        
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+        
+          <a href="http://weibo.com/tomytianqi" class="iconfont icon-weibo" title="weibo"></a>
+        
+      
+    
+      
+    
+    
+    
+      <a href="/use `atom.xml`" class="iconfont icon-rss" title="rss"></a>
+    
+  </div>
+
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://hexo.io/">Hexo</a>
+  </span>
+  
+  <span class="theme-info">
+    Theme - 
+    <a class="theme-link" href="https://github.com/ahonn/hexo-theme-even">Even</a>
+  </span>
+
+  <span class="copyright-year">
+    
+    &copy; 
+     
+      2016 - 
+    
+    2017
+
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">tomy</span>
+  </span>
+</div>
+      </footer>
+
+      <div class="back-to-top" id="back-to-top">
+        <i class="iconfont icon-up"></i>
+      </div>
+    </div>
+
+    
+
+  <script type="text/javascript">
+    var disqus_config = function () {
+        this.page.url = 'http://tomys.win/2016/11/02/bugs/';
+        this.page.identifier = '2016/11/02/bugs/';
+        this.page.title = '关于ld: embedded dylibs/frameworks are only supported on iOS 8.0 and later (@rpath/XXX.framework/XXX) for architecture x86_64 错误解决';
+    };
+    (function() {
+    var d = document, s = d.createElement('script');
+
+    s.src = '//tomy.disqus.com/embed.js';
+
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+    })();  
+  </script>
+
+
+    
+  
+
+
+
+
+
+  
+    <script type="text/javascript" src="/lib/jquery/jquery-3.1.1.min.js"></script>
+  
+
+  
+    <script type="text/javascript" src="/lib/fancybox/jquery.fancybox.pack.js"></script>
+  
+
+    <script type="text/javascript" src="/js/src/even.js?v=2.1.0"></script>
+<script type="text/javascript" src="/js/src/bootstrap.js?v=2.1.0"></script>
+
+  </body>
+</html>

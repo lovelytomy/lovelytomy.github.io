@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="">
+  <head>
+    <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+  <meta name="description" content="群讨论记录2">
+
+
+
+
+  <meta name="keywords" content="iOS,群记录,">
+
+
+
+
+  <link rel="alternate" href="/use `atom.xml`" title="tomy’s  little world">
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=2.1.0">
+
+
+
+<link rel="canonical" href="http://tomys.win/2016/02/29/groupSummary160224/">
+
+
+<meta name="description" content="记录了群里2016-02-22至2016-02-28讨论的一些问题，如有错误还望告知。
+
+1. 关于Objective-C链式编程的“点语法”123456789person.run();- (Person * (^)())run &amp;#123;        Person * (^block)() = ^()&amp;#123;        NSLog(@&quot;run&quot;);        return se">
+<meta property="og:type" content="article">
+<meta property="og:title" content="群讨论记录2">
+<meta property="og:url" content="http://tomys.win/2016/02/29/groupSummary160224/index.html">
+<meta property="og:site_name" content="tomy’s  little world">
+<meta property="og:description" content="记录了群里2016-02-22至2016-02-28讨论的一些问题，如有错误还望告知。
+
+1. 关于Objective-C链式编程的“点语法”123456789person.run();- (Person * (^)())run &amp;#123;        Person * (^block)() = ^()&amp;#123;        NSLog(@&quot;run&quot;);        return se">
+<meta property="og:updated_time" content="2016-04-02T15:59:32.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="群讨论记录2">
+<meta name="twitter:description" content="记录了群里2016-02-22至2016-02-28讨论的一些问题，如有错误还望告知。
+
+1. 关于Objective-C链式编程的“点语法”123456789person.run();- (Person * (^)())run &amp;#123;        Person * (^block)() = ^()&amp;#123;        NSLog(@&quot;run&quot;);        return se">
+
+
+<link rel="stylesheet" type="text/css" href="/css/style.css?v=2.1.0">
+
+
+
+  <link rel="stylesheet" type="text/css" href="/lib/fancybox/jquery.fancybox.css">
+
+
+
+
+  
+
+
+
+    <title> 群讨论记录2 · tomy’s  little world </title>
+  </head>
+
+  <body>
+    <div class="container">
+      <header id="header" class="header"><div class="logo-wrapper">
+  <a href="/." class="logo">tomy’s  little world</a>
+</div>
+
+<nav class="site-nav">
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item">
+          <a class="menu-item-link" href="/">
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item">
+          <a class="menu-item-link" href="/archives/">
+            Archives
+          </a>
+        </li>
+      
+        
+        <li class="menu-item">
+          <a class="menu-item-link" href="/tags">
+            Tags
+          </a>
+        </li>
+      
+        
+        <li class="menu-item">
+          <a class="menu-item-link" href="/about">
+            About
+          </a>
+        </li>
+      
+      
+        <li class="menu-search">
+          <form>
+            <i class="iconfont icon-search" id="open-search"></i>
+            <input type="text" class="search-input" id="search-input">
+            <i class="iconfont icon-close" id="close-search"></i>
+          </form>
+        </li>
+      
+    </ul>
+  
+</nav>
+
+<div class="mobile-navbar">
+  <div class="mobile-header">
+    <div class="mobile-header-logo">
+      <a href="/." class="logo">tomy’s  little world</a>
+    </div>
+
+    <div class="mobile-header-icon">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </div>
+  <nav class="mobile-menu">
+    
+      
+      <a class="mobile-menu-item" href="/">
+        Home
+      </a>
+    
+      
+      <a class="mobile-menu-item" href="/archives/">
+        Archives
+      </a>
+    
+      
+      <a class="mobile-menu-item" href="/tags">
+        Tags
+      </a>
+    
+      
+      <a class="mobile-menu-item" href="/about">
+        About
+      </a>
+    
+  </nav>
+</div>
+      </header>
+
+      <main id="main" class="main">
+        <div class="content-wrapper">
+          <div id="content" class="content">
+            
+  
+  <article class="post">
+    <header class="post-header">
+      <h1 class="post-title">
+        
+          群讨论记录2
+        
+      </h1>
+
+      <div class="post-meta">
+        <span class="post-time">
+          Feb 28, 2016
+        </span>
+      </div>
+    </header>
+
+    
+      <div class="post-toc" id="post-toc">
+        <h2 class="post-toc-title">Contents</h2>
+        <div class="post-toc-content">
+          <ol class="toc"><li class="toc-item toc-level-5"><a class="toc-link" href="#1-关于Objective-C链式编程的“点语法”"><span class="toc-text">1. 关于Objective-C链式编程的“点语法”</span></a></li></ol>
+        </div>
+      </div>
+    
+
+    <div class="post-content">
+      
+        <ul>
+<li>记录了群里2016-02-22至2016-02-28讨论的一些问题，如有错误还望告知。</li>
+</ul>
+<h5 id="1-关于Objective-C链式编程的“点语法”"><a href="#1-关于Objective-C链式编程的“点语法”" class="headerlink" title="1. 关于Objective-C链式编程的“点语法”"></a><strong>1. 关于Objective-C链式编程的“点语法”</strong></h5><figure class="highlight erlang"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">person.run();</div><div class="line">- <span class="params">(Person * (^)</span><span class="params">()</span>)run &#123;</div><div class="line">    </div><div class="line">    Person * <span class="params">(^block)</span><span class="params">()</span> = ^<span class="params">()</span>&#123;</div><div class="line">        NSLog<span class="params">(@<span class="string">"run"</span>)</span>;</div><div class="line">        return self;</div><div class="line">    &#125;;</div><div class="line">    return block;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<ul>
+<li>问题描述：对于链式编程有个疑问,run不是set get方法，为什么可以用点操作符？</li>
+<li>问题讨论：大概是因为.run返回block然后返回block(),文章<a href="http://www.knowsky.com/884137.html" target="_blank" rel="external">iOS利用block实现链式编程方法</a>中指出：block具有一个函数的外观，又被当作一个变量。那么block就具备两个功能，第一：可以作为类的属性被’点’出来。第二：可以当作函数直接调用。下面逐个解释，第一个类的属性可以点出来，比如person.name;这很好理解，你一定见过，str.length;对吧。第二个呢，block作为一个变量，但是又可以把它当作指向函数的指针一样调用。</li>
+<li>追加问题：还有个问题,就是任何方法都可以用点操作调用, 例如 person.eat ,运行正常,但是调用时会有个警告.property access result unused - getters should not be used for side effect.这是什么意思?我以为点操作符调用都是只能用在set get方法上的</li>
+<li>追加问题结果：出现警告的原因就是点操作符会展开成get方法,而没变量来接收的话就会出现警告。无参方法才能点操作符调用,但是一般不这么用，有参数的方法就不能用点操作符了，因为编译器认为不是get方法，所以不带参数的方法,系统就认为是get方法。（这个是提问者自己后来经过查询测试得出的结论）</li>
+<li>304，602</li>
+</ul>
+<a id="more"></a>
+      
+    </div>
+
+    
+      <footer class="post-footer">
+        <div class="post-tags">
+          
+            <a href="/tags/iOS/">iOS</a>
+          
+            <a href="/tags/群记录/">群记录</a>
+          
+        </div>
+
+        
+  <nav class="post-nav">
+    
+      <a class="prev" href="/2016/03/03/douyuVideo/">
+        <i class="iconfont icon-left"></i>
+        <span class="prev-text nav-default">斗鱼视频及相关博主信息</span>
+        <span class="prev-text nav-mobile">Prev</span>
+      </a>
+    
+    
+      <a class="next" href="/2016/02/23/someShare/">
+        <span class="next-text nav-default">群分享--待整理归纳</span>
+        <span class="prev-text nav-mobile">Next</span>
+        <i class="iconfont icon-right"></i>
+      </a>
+    
+  </nav>
+
+      </footer>
+    
+  </article>
+
+
+          </div>
+          
+  <div class="comments" id="comments">
+    
+      <div id="disqus_thread">
+        <noscript>
+          Please enable JavaScript to view the
+          <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a>
+        </noscript>
+      </div>
+    
+  </div>
+
+        </div>  
+      </main>
+
+      <footer id="footer" class="footer">
+  <div class="social-links">
+    
+      
+        
+          <a href="mailto:535303865@qq.com" class="iconfont icon-email" title="email"></a>
+        
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+        
+          <a href="http://weibo.com/tomytianqi" class="iconfont icon-weibo" title="weibo"></a>
+        
+      
+    
+      
+    
+    
+    
+      <a href="/use `atom.xml`" class="iconfont icon-rss" title="rss"></a>
+    
+  </div>
+
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://hexo.io/">Hexo</a>
+  </span>
+  
+  <span class="theme-info">
+    Theme - 
+    <a class="theme-link" href="https://github.com/ahonn/hexo-theme-even">Even</a>
+  </span>
+
+  <span class="copyright-year">
+    
+    &copy; 
+     
+      2016 - 
+    
+    2017
+
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">tomy</span>
+  </span>
+</div>
+      </footer>
+
+      <div class="back-to-top" id="back-to-top">
+        <i class="iconfont icon-up"></i>
+      </div>
+    </div>
+
+    
+
+  <script type="text/javascript">
+    var disqus_config = function () {
+        this.page.url = 'http://tomys.win/2016/02/29/groupSummary160224/';
+        this.page.identifier = '2016/02/29/groupSummary160224/';
+        this.page.title = '群讨论记录2';
+    };
+    (function() {
+    var d = document, s = d.createElement('script');
+
+    s.src = '//tomy.disqus.com/embed.js';
+
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+    })();  
+  </script>
+
+
+    
+  
+
+
+
+
+
+  
+    <script type="text/javascript" src="/lib/jquery/jquery-3.1.1.min.js"></script>
+  
+
+  
+    <script type="text/javascript" src="/lib/fancybox/jquery.fancybox.pack.js"></script>
+  
+
+    <script type="text/javascript" src="/js/src/even.js?v=2.1.0"></script>
+<script type="text/javascript" src="/js/src/bootstrap.js?v=2.1.0"></script>
+
+  </body>
+</html>
