@@ -11,6 +11,8 @@
 
 
 
+  <meta name="description" content="categories">
+
 
 
 
@@ -26,15 +28,16 @@
 
 
 
-<link rel="canonical" href="http://tomys.win/page/2/">
+<link rel="canonical" href="http://tomys.win/categories/">
 
 
 <meta property="og:type" content="website">
-<meta property="og:title" content="tomy’s  little world">
-<meta property="og:url" content="http://tomys.win/page/2/index.html">
+<meta property="og:title" content="categories">
+<meta property="og:url" content="http://tomys.win/categories/index.html">
 <meta property="og:site_name" content="tomy’s  little world">
+<meta property="og:updated_time" content="2017-01-05T05:05:27.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="tomy’s  little world">
+<meta name="twitter:title" content="categories">
 
 
 <link rel="stylesheet" type="text/css" href="/css/style.css?v=2.1.0">
@@ -50,7 +53,7 @@
 
 
 
-    <title> tomy’s  little world </title>
+    <title> Categories · tomy’s  little world </title>
   </head>
 
   <body>
@@ -158,76 +161,28 @@
         <div class="content-wrapper">
           <div id="content" class="content">
             
-  <section id="posts" class="posts">
-    
+  <div class="categories">
+    <div class="categories-title">
+      No Categories
+    </div>
+    <div class="categories-tags">
       
-  <article class="post">
-    <header class="post-header">
-      <h1 class="post-title">
-        
-          <a class="post-link" href="/2016/02/22/groupSummary160215/">群讨论记录1</a>
-        
-      </h1>
+    </div>
+  </div>
 
-      <div class="post-meta">
-        <span class="post-time">
-          Feb 21, 2016
-        </span>
+          </div>
+          
+  <div class="comments" id="comments">
+    
+      <div id="disqus_thread">
+        <noscript>
+          Please enable JavaScript to view the
+          <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a>
+        </noscript>
       </div>
-    </header>
-
     
+  </div>
 
-    <div class="post-content">
-      
-        
-          
-        
-
-        
-          <ul>
-<li>记录了群里2016-02-15至2016-02-21讨论的一些问题，如有错误还望告知。</li>
-</ul>
-<h5 id="1-电脑上的证书提示：“此证书的签发者无效”"><a href="#1-电脑上的证书提示：“此证书的签发者无效”" class="headerlink" title="1. 电脑上的证书提示：“此证书的签发者无效”"></a>1. 电脑上的证书提示：“此证书的签发者无效”</h5><p><img src="http://7xrmmr.com1.z0.glb.clouddn.com/jianq.jpg" alt="此证书的签发者无效"></p>
-<ul>
-<li>问题描述：登录开发者账号，发现账号证书依然可用，只是电脑上的显示“此证书的签发者无效”，而且发布也会出错。</li>
-<li>问题原因：<code>Apple World Wide Developer Relations Certificate Authority</code>的过期时间是2016年2月14日，因此签发者签发的证书都过期了。</li>
-<li>问题解决：<br><code>方法1</code>:在钥匙串中删除过期证书，重新下载证书安装。已经有人写了详细的教程，这里就不在赘述了，详见<a href="http://www.jianshu.com/p/cda1790ea317">解决办法</a><br><code>方法2</code>:直接在过期的证书上右键-&gt;显示简介-&gt;信任-&gt;使用此证书时，设置为“始终信任”。但这种方法可能有未知风险，虽然能快速解决眼前的问题，所以请慎用。</li>
-</ul>
-<h5 id="2-百度云推送旧版本SDK的应用突然收不到推送"><a href="#2-百度云推送旧版本SDK的应用突然收不到推送" class="headerlink" title="2. 百度云推送旧版本SDK的应用突然收不到推送"></a>2. 百度云推送旧版本SDK的应用突然收不到推送</h5><ul>
-<li>问题描述：使用百度云推送旧版本SDK的应用突然收不到推送了  安卓端能收到  升级新版本后能收到推送  但服务端和安卓端也需要跟着升级  服务端不是很乐意啊  请问有人遇到这种情况吗  不升级版本有什么好的解决办法吗？都上线半年了  客户说收到推送就崩溃。</li>
-<li>问题原因：使用jsonkit的原因，在之前兼容64位操作系统时jsonkit 出问题，这次ios9更新又中招了，更新xcode7后原来的jsonkit崩溃,崩溃位置为：</li>
-</ul>
-<figure class="highlight groovy"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">[JKSerializer <span class="string">serializeObject:</span><span class="string">options:</span><span class="string">encodeOption:</span><span class="string">block:</span><span class="string">delegate:</span><span class="string">selector:</span><span class="string">error:</span>]</div><div class="line"><span class="keyword">void</span> *keyObjectISA = *((<span class="keyword">void</span> **)keys[idx]);</div></pre></td></tr></table></figure>
-<ul>
-<li>问题解决：替换<a href="https://github.com/jcbertin/JSONKit">jsonkit</a>的 JSONKit.m文件就好了 。
-          <div class="read-more">
-            <a href="/2016/02/22/groupSummary160215/" class="read-more-link">Read more..</a>
-          </div>
-        
-      
-    </li></ul></div>
-
-    
-  </article>
-
-    
-  </section>
-
-  
-  <nav class="pagination">
-    
-      <a class="prev" href="/">
-        <i class="iconfont icon-left"></i>
-        <span class="prev-text">Prev</span>
-      </a>
-    
-    
-  </nav>
-
-
-          </div>
-          
         </div>  
       </main>
 
@@ -298,9 +253,9 @@
 
   <script type="text/javascript">
     var disqus_config = function () {
-        this.page.url = '';
-        this.page.identifier = 'page/2/index.html';
-        this.page.title = '';
+        this.page.url = 'http://tomys.win/categories/index.html';
+        this.page.identifier = 'categories/index.html';
+        this.page.title = 'categories';
     };
     (function() {
     var d = document, s = d.createElement('script');
