@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="">
+  <head>
+    <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+  <meta name="description" content="css｜由食堂菜谱引发的垂直居中">
+
+
+
+
+  <meta name="keywords" content="CSS,">
+
+
+
+
+  <link rel="alternate" href="/use `atom.xml`" title="tomy’s  little world">
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/tutu.jpg?v=2.1.0">
+
+
+
+<link rel="canonical" href="http://tomys.win/2017/01/06/css|由食堂菜谱引发的垂直居中/">
+
+
+<meta name="description" content="美工设计了一个食堂每周菜谱的PSD（如图1），本来这个页面用原生iOS实现并不难，但这个偏偏是微信网页用的，许久未写html代码，所以有些手生，遇到的最大问题是列表左侧的的内容在单元格中垂直居中，虽然网上有很多关于div内容垂直居中的文章，但是大多数情况下都是在已知div高度的情况下实现的，但是这个设计中，右侧的菜谱内容不固定，所以高度也不固定，因此没有办法按照一般的垂直居中来实现。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="css｜由食堂菜谱引发的垂直居中">
+<meta property="og:url" content="http://tomys.win/2017/01/06/css|由食堂菜谱引发的垂直居中/index.html">
+<meta property="og:site_name" content="tomy’s  little world">
+<meta property="og:description" content="美工设计了一个食堂每周菜谱的PSD（如图1），本来这个页面用原生iOS实现并不难，但这个偏偏是微信网页用的，许久未写html代码，所以有些手生，遇到的最大问题是列表左侧的的内容在单元格中垂直居中，虽然网上有很多关于div内容垂直居中的文章，但是大多数情况下都是在已知div高度的情况下实现的，但是这个设计中，右侧的菜谱内容不固定，所以高度也不固定，因此没有办法按照一般的垂直居中来实现。">
+<meta property="og:image" content="http://7xrmmr.com1.z0.glb.clouddn.com/tomys/3%E6%9C%AC%E5%91%A8%E9%A3%9F%E8%B0%B1.jpg">
+<meta property="og:image" content="http://7xrmmr.com1.z0.glb.clouddn.com/tomys/Hello_MUI.jpg">
+<meta property="og:updated_time" content="2017-01-06T05:33:44.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="css｜由食堂菜谱引发的垂直居中">
+<meta name="twitter:description" content="美工设计了一个食堂每周菜谱的PSD（如图1），本来这个页面用原生iOS实现并不难，但这个偏偏是微信网页用的，许久未写html代码，所以有些手生，遇到的最大问题是列表左侧的的内容在单元格中垂直居中，虽然网上有很多关于div内容垂直居中的文章，但是大多数情况下都是在已知div高度的情况下实现的，但是这个设计中，右侧的菜谱内容不固定，所以高度也不固定，因此没有办法按照一般的垂直居中来实现。">
+<meta name="twitter:image" content="http://7xrmmr.com1.z0.glb.clouddn.com/tomys/3%E6%9C%AC%E5%91%A8%E9%A3%9F%E8%B0%B1.jpg">
+
+
+<link rel="stylesheet" type="text/css" href="/css/style.css?v=2.1.0">
+
+
+
+  <link rel="stylesheet" type="text/css" href="/lib/fancybox/jquery.fancybox.css">
+
+
+
+
+  
+
+
+
+    <title> css｜由食堂菜谱引发的垂直居中 · tomy’s  little world </title>
+  </head>
+
+  <body>
+    <div class="container">
+      <header id="header" class="header"><div class="logo-wrapper">
+  <a href="/." class="logo">tomy’s  little world</a>
+</div>
+
+<nav class="site-nav">
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item">
+          <a class="menu-item-link" href="/">
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item">
+          <a class="menu-item-link" href="/archives/">
+            Archives
+          </a>
+        </li>
+      
+        
+        <li class="menu-item">
+          <a class="menu-item-link" href="/tags">
+            Tags
+          </a>
+        </li>
+      
+        
+        <li class="menu-item">
+          <a class="menu-item-link" href="/categories">
+            Categories
+          </a>
+        </li>
+      
+        
+        <li class="menu-item">
+          <a class="menu-item-link" href="/about">
+            About
+          </a>
+        </li>
+      
+      
+        <li class="menu-search">
+          <form>
+            <i class="iconfont icon-search" id="open-search"></i>
+            <input type="text" class="search-input" id="search-input">
+            <i class="iconfont icon-close" id="close-search"></i>
+          </form>
+        </li>
+      
+    </ul>
+  
+</nav>
+
+<div class="mobile-navbar">
+  <div class="mobile-header">
+    <div class="mobile-header-logo">
+      <a href="/." class="logo">tomy’s  little world</a>
+    </div>
+
+    <div class="mobile-header-icon">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </div>
+  <nav class="mobile-menu">
+    
+      
+      <a class="mobile-menu-item" href="/">
+        Home
+      </a>
+    
+      
+      <a class="mobile-menu-item" href="/archives/">
+        Archives
+      </a>
+    
+      
+      <a class="mobile-menu-item" href="/tags">
+        Tags
+      </a>
+    
+      
+      <a class="mobile-menu-item" href="/categories">
+        Categories
+      </a>
+    
+      
+      <a class="mobile-menu-item" href="/about">
+        About
+      </a>
+    
+  </nav>
+</div>
+      </header>
+
+      <main id="main" class="main">
+        <div class="content-wrapper">
+          <div id="content" class="content">
+            
+  
+  <article class="post">
+    <header class="post-header">
+      <h1 class="post-title">
+        
+          css｜由食堂菜谱引发的垂直居中
+        
+      </h1>
+
+      <div class="post-meta">
+        <span class="post-time">
+          Jan 6, 2017
+        </span>
+      </div>
+    </header>
+
+    
+      <div class="post-toc" id="post-toc">
+        <h2 class="post-toc-title">Contents</h2>
+        <div class="post-toc-content">
+          <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#基于Flexbox-的垂直居中"><span class="toc-text">基于Flexbox 的垂直居中</span></a></li></ol>
+        </div>
+      </div>
+    
+
+    <div class="post-content">
+      
+        <p>   美工设计了一个食堂每周菜谱的PSD（如图1），本来这个页面用原生iOS实现并不难，但这个偏偏是微信网页用的，许久未写html代码，所以有些手生，遇到的最大问题是列表左侧的的内容在单元格中垂直居中，虽然网上有很多关于div内容垂直居中的文章，但是大多数情况下都是在已知div高度的情况下实现的，但是这个设计中，右侧的菜谱内容不固定，所以高度也不固定，因此没有办法按照一般的垂直居中来实现。<br>   <a id="more"></a><br>   <img src="http://7xrmmr.com1.z0.glb.clouddn.com/tomys/3%E6%9C%AC%E5%91%A8%E9%A3%9F%E8%B0%B1.jpg" alt="图1"></p>
+<pre><code>#### 基于绝对定位＋transform 的垂直居中
+translate():translate()方法，根据左(X轴)和顶部(Y轴)位置给定的参数，从当前元素位置移动.当我们在translate() 变形函数中使用百分比值时,是以这个元素自身的宽度和高度 为基准进行换算和移动的，这样我们就可以解除对固定尺寸的依赖。
+
+.translate {
+       transform: translate(50px,100px); 
+      -ms-transform: translate(50px,100px); /* IE 9 */ 
+    -webkit-transform: translate(50px,100px); /* Safari and Chrome */ 
+    -o-transform: translate(50px,100px); /* Opera */ 
+    -moz-transform: translate(50px,100px); /* Firefox */
+}
+</code></pre>   <figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"> 	  <span class="tag">&lt;<span class="name">li</span> <span class="attr">class</span>=<span class="string">"mui-table-view-cell"</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"my-left"</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"myMargin"</span>&gt;</span></div><div class="line">		<span class="tag">&lt;<span class="name">p</span> <span class="attr">class</span>=<span class="string">"lightGreenColor"</span>&gt;</span>周一<span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line">		<span class="tag">&lt;<span class="name">p</span> <span class="attr">class</span>=<span class="string">"lightGrayColor myMarginTop"</span>&gt;</span>2016-12-01<span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line">	<span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"my-middle"</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">p</span> <span class="attr">class</span>=<span class="string">"myMarginTop"</span>&gt;</span>北京烧鸭饭<span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">p</span> <span class="attr">class</span>=<span class="string">"myMarginTop"</span>&gt;</span>宫保鸡丁<span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">p</span> <span class="attr">class</span>=<span class="string">"myMarginTop"</span>&gt;</span>北京烧鸭饭<span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">p</span> <span class="attr">class</span>=<span class="string">"myMarginTop"</span>&gt;</span>宫保鸡丁<span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">p</span> <span class="attr">class</span>=<span class="string">"myMarginTop"</span>&gt;</span>北京烧鸭饭<span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">p</span> <span class="attr">class</span>=<span class="string">"myMarginTop"</span>&gt;</span>宫保鸡丁<span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">li</span>&gt;</span></div></pre></td></tr></table></figure>
+<pre><code>.mui-table-view-cell {
+  position: relative;
+｝
+.myMargin{
+    position: absolute;
+    top: 50%;
+    width:50%;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -ms-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+    text-align: center;
+}
+</code></pre><h4 id="基于Flexbox-的垂直居中"><a href="#基于Flexbox-的垂直居中" class="headerlink" title="基于Flexbox 的垂直居中"></a>基于Flexbox 的垂直居中</h4><p>  其实我一直对上个做法不是很满意，因为设置了绝对定位后，水平上居中有所影响，最后还是通过一些magin设置勉强达到水平居中。偶然间看到一个人关于垂直居中的总结，提到了Flexbox的方法，感觉很棒。试着用这种方法修改了我原来的写法，发现代码更少了，逻辑结构更清晰了。详见<a href="https://github.com/lovelytomy/diningHallMenu" target="_blank" rel="external">demo</a>中2.html中的写法。<br>  使用Flexbox布局只需写两行声明即可:先给这个待居中元素的父元素设置 display: flex(在这个例子中是 class为mui-table-view-cell的li 元素),再给这个元素自身（在这个例子中是class为my-left的div）设置margin: auto</p>
+  <figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"> 	<span class="selector-class">.mui-table-view-cell</span> &#123;</div><div class="line">    <span class="attribute">display</span>: flex;</div><div class="line">&#125;</div><div class="line"><span class="selector-class">.my-left</span> &#123;</div><div class="line">	<span class="attribute">margin</span>: auto;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>  这样就好了，还可以去掉之前class为myMargin的div，而且同时也实现了水平居中，真实一举两得。<br>  最终效果</p>
+<p>  <img src="http://7xrmmr.com1.z0.glb.clouddn.com/tomys/Hello_MUI.jpg" alt="图2"></p>
+      
+    </div>
+
+    
+      <footer class="post-footer">
+        <div class="post-tags">
+          
+            <a href="/tags/CSS/">CSS</a>
+          
+        </div>
+
+        
+  <nav class="post-nav">
+    
+    
+      <a class="next" href="/2017/01/05/年夜饭菜单/">
+        <span class="next-text nav-default">年夜饭菜单</span>
+        <span class="prev-text nav-mobile">Next</span>
+        <i class="iconfont icon-right"></i>
+      </a>
+    
+  </nav>
+
+      </footer>
+    
+  </article>
+
+
+          </div>
+          
+  <div class="comments" id="comments">
+    
+      <div id="disqus_thread">
+        <noscript>
+          Please enable JavaScript to view the
+          <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a>
+        </noscript>
+      </div>
+    
+  </div>
+
+        </div>  
+      </main>
+
+      <footer id="footer" class="footer">
+  <div class="social-links">
+    
+      
+        
+          <a href="mailto:535303865@qq.com" class="iconfont icon-email" title="email"></a>
+        
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+        
+          <a href="http://weibo.com/tomytianqi" class="iconfont icon-weibo" title="weibo"></a>
+        
+      
+    
+      
+    
+    
+    
+      <a href="/use `atom.xml`" class="iconfont icon-rss" title="rss"></a>
+    
+  </div>
+
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://hexo.io/">Hexo</a>
+  </span>
+  
+  <span class="theme-info">
+    Theme - 
+    <a class="theme-link" href="https://github.com/ahonn/hexo-theme-even">Even</a>
+  </span>
+
+  <span class="copyright-year">
+    
+    &copy; 
+     
+      2016 - 
+    
+    2017
+
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">tomy</span>
+  </span>
+</div>
+      </footer>
+
+      <div class="back-to-top" id="back-to-top">
+        <i class="iconfont icon-up"></i>
+      </div>
+    </div>
+
+    
+
+  <script type="text/javascript">
+    var disqus_config = function () {
+        this.page.url = 'http://tomys.win/2017/01/06/css|由食堂菜谱引发的垂直居中/';
+        this.page.identifier = '2017/01/06/css|由食堂菜谱引发的垂直居中/';
+        this.page.title = 'css｜由食堂菜谱引发的垂直居中';
+    };
+    (function() {
+    var d = document, s = d.createElement('script');
+
+    s.src = '//tomy.disqus.com/embed.js';
+
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+    })();  
+  </script>
+
+
+    
+  
+
+
+
+
+
+  
+    <script type="text/javascript" src="/lib/jquery/jquery-3.1.1.min.js"></script>
+  
+
+  
+    <script type="text/javascript" src="/lib/fancybox/jquery.fancybox.pack.js"></script>
+  
+
+    <script type="text/javascript" src="/js/src/even.js?v=2.1.0"></script>
+<script type="text/javascript" src="/js/src/bootstrap.js?v=2.1.0"></script>
+
+  </body>
+</html>
