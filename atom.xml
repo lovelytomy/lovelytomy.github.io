@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://tomys.win/"/>
-  <updated>2017-01-09T05:52:05.000Z</updated>
+  <updated>2017-01-09T05:53:38.000Z</updated>
   <id>http://tomys.win/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://tomys.win/2017/01/09/html%EF%BD%9CArea-Map%E5%BA%94%E7%94%A8%E5%AE%9E%E4%BE%8B/"/>
     <id>http://tomys.win/2017/01/09/html｜Area-Map应用实例/</id>
     <published>2017-01-09T12:03:00.000Z</published>
-    <updated>2017-01-09T05:52:05.000Z</updated>
+    <updated>2017-01-09T05:53:38.000Z</updated>
     
     <content type="html"><![CDATA[<p>&emsp;&emsp;HTML图片热区Area map的用法只是在上学的时候学习到过，在实际工作中一直没用过，如果 不是这次紧急任务，可能永远都不会想起这个功能。在一些特殊的html页面布局中巧用area，能省好多时间，达到事半功倍的效果。<br>   <a id="more"></a></p>
 <h4 id="area简介"><a href="#area简介" class="headerlink" title="area简介"></a>area简介</h4><ul>
@@ -28,7 +28,7 @@
 <figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">"planets.jpg"</span> <span class="attr">border</span>=<span class="string">"0"</span> <span class="attr">usemap</span>=<span class="string">"#planetmap"</span> <span class="attr">alt</span>=<span class="string">"Planets"</span> /&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">map</span> <span class="attr">name</span>=<span class="string">"planetmap"</span> <span class="attr">id</span>=<span class="string">"planetmap"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">area</span> <span class="attr">shape</span>=<span class="string">"circle"</span> <span class="attr">coords</span>=<span class="string">"180,139,14"</span> <span class="attr">href</span> =<span class="string">"venus.html"</span> <span class="attr">alt</span>=<span class="string">"Venus"</span> /&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">area</span> <span class="attr">shape</span>=<span class="string">"circle"</span> <span class="attr">coords</span>=<span class="string">"129,161,10"</span> <span class="attr">href</span> =<span class="string">"mercur.html"</span> <span class="attr">alt</span>=<span class="string">"Mercury"</span> /&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">area</span> <span class="attr">shape</span>=<span class="string">"rect"</span> <span class="attr">coords</span>=<span class="string">"0,0,110,260"</span> <span class="attr">href</span> =<span class="string">"sun.html"</span> <span class="attr">alt</span>=<span class="string">"Sun"</span> /&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">map</span>&gt;</span></div></pre></td></tr></table></figure>
 </li>
 <li><p>用法简介：<br>1.一般<img> 中的 usemap 属性可引用 <map> 中的 id 或 name 属性（由浏览器决定），所以我们需要同时向 <map> 添加 id 和 name 两个属性，以此来表示img与map之前的映射关系。<br>2.<area>总是嵌套在<map>标签中，<area>表示在图像中的映射区域。<br>3.shape和coords：shape定义鼠标敏感区域的形状（圆形，矩形，多边形），coords定义敏感区域的坐标。两者结合可以定义敏感区域的位置形状和大小。<br>4.href 和 target ：href定义区域的目标链接，target定义何处打开href，方式与<a></a>中的target用法相同。<br>5.area事件：area标签也支持<a href="http://www.w3school.com.cn/tags/tag_area.asp" target="_blank" rel="external">HTML 中的事件属性</a>,比如常见的onclick，onload等事件。</map></map></map></p>
-<h4 id="特殊页面巧用area实例"><a href="#特殊页面巧用area实例" class="headerlink" title="特殊页面巧用area实例"></a>特殊页面巧用area实例</h4><p>&emsp;&emsp;area通常用在地图应用中，平时很少接触地图项目，所以渐渐快忘记这个标签了。最近的一个突发事件，让我对area的应用有了新的认识。临下班前，老板突然发给我十几个psd文件，让我做成html静态网页，莫说在临下班前写完十几个，写完四五个对我来说也是压力山大啊（ps：我已经将近两年没写过html页面了，这两年一直在做iOS），而且老板说了，要快！仔细研究了这些页面，虽然量大，但是大部分都是展示，只有少数几个地方需要点击跳转或者填写内容，那么对于这种主要作为展示又只是有少量点击功能的页面可以用area热点来快速实现。<br><img src="http://7xrmmr.com1.z0.glb.clouddn.com/tomys/%E7%89%B9%E6%B4%BE%E5%91%98%E8%AF%8101%E6%97%A0top.jpg=375x667" alt="图1"><br><img src="http://7xrmmr.com1.z0.glb.clouddn.com/tomys/%E7%89%B9%E6%B4%BE%E5%91%98%E8%AF%8105_.jpg" alt="图2"></p>
+<h4 id="特殊页面巧用area实例"><a href="#特殊页面巧用area实例" class="headerlink" title="特殊页面巧用area实例"></a>特殊页面巧用area实例</h4><p>&emsp;&emsp;area通常用在地图应用中，平时很少接触地图项目，所以渐渐快忘记这个标签了。最近的一个突发事件，让我对area的应用有了新的认识。临下班前，老板突然发给我十几个psd文件，让我做成html静态网页，莫说在临下班前写完十几个，写完四五个对我来说也是压力山大啊（ps：我已经将近两年没写过html页面了，这两年一直在做iOS），而且老板说了，要快！仔细研究了这些页面，虽然量大，但是大部分都是展示，只有少数几个地方需要点击跳转或者填写内容，那么对于这种主要作为展示又只是有少量点击功能的页面可以用area热点来快速实现。<br><img src="http://7xrmmr.com1.z0.glb.clouddn.com/tomys/%E7%89%B9%E6%B4%BE%E5%91%98%E8%AF%8101%E6%97%A0top.jpg=375x667" alt="图1"><br><img src="http://7xrmmr.com1.z0.glb.clouddn.com/tomys/%E7%89%B9%E6%B4%BE%E5%91%98%E8%AF%8105_.jpg" alt="图2"><br><img src="http://ww2.sinaimg.cn/bmiddle/88070423gw1ep30aw8an7g204d04gkgd.gif =400x400" alt="亦菲表演机器猫"></p>
 </li>
 </ul>]]></content>
     
