@@ -17,7 +17,7 @@
 <li><area>总是嵌套在<map>标签中，<area>表示在图像中的映射区域。</map></li>
 <li>shape和coords：shape定义鼠标敏感区域的形状（圆形，矩形，多边形），coords定义敏感区域的坐标。两者结合可以定义敏感区域的位置形状和大小。</li>
 <li>href 和 target ：href定义区域的目标链接，target定义何处打开href，方式与<a></a>中的target用法相同。</li>
-<li>area事件：area标签也支持<a href="http://www.w3school.com.cn/tags/tag_area.asp" target="_blank" rel="external">HTML 中的事件属性</a>,比如常见的onclick，onload等事件。[空行]</li>
+<li>area事件：area标签也支持<a href="http://www.w3school.com.cn/tags/tag_area.asp" target="_blank" rel="external">HTML 中的事件属性</a>,比如常见的onclick，onload等事件。</li>
 </ol>
 </li>
 </ul>
