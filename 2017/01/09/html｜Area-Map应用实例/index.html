@@ -33,16 +33,16 @@
 <link rel="canonical" href="http://tomys.win/2017/01/09/html｜Area-Map应用实例/">
 
 
-<meta name="description" content="HTML图片热区Area map的用法只是在上学的时候学习到过，在实际工作中一直没用过，如果这次紧急任务，可能永远都不会想起这个功能。在正常的html页面布局中巧用area，能省好多时间，达到事半功倍的效果。">
+<meta name="description" content="HTML图片热区Area map的用法只是在上学的时候学习到过，在实际工作中一直没用过，如果 不是这次紧急任务，可能永远都不会想起这个功能。在一些特殊的html页面布局中巧用area，能省好多时间，达到事半功倍的效果。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="html｜Area-Map应用实例">
 <meta property="og:url" content="http://tomys.win/2017/01/09/html｜Area-Map应用实例/index.html">
 <meta property="og:site_name" content="tomy’s  little world">
-<meta property="og:description" content="HTML图片热区Area map的用法只是在上学的时候学习到过，在实际工作中一直没用过，如果这次紧急任务，可能永远都不会想起这个功能。在正常的html页面布局中巧用area，能省好多时间，达到事半功倍的效果。">
-<meta property="og:updated_time" content="2017-01-09T03:07:13.000Z">
+<meta property="og:description" content="HTML图片热区Area map的用法只是在上学的时候学习到过，在实际工作中一直没用过，如果 不是这次紧急任务，可能永远都不会想起这个功能。在一些特殊的html页面布局中巧用area，能省好多时间，达到事半功倍的效果。">
+<meta property="og:updated_time" content="2017-01-09T03:10:28.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="html｜Area-Map应用实例">
-<meta name="twitter:description" content="HTML图片热区Area map的用法只是在上学的时候学习到过，在实际工作中一直没用过，如果这次紧急任务，可能永远都不会想起这个功能。在正常的html页面布局中巧用area，能省好多时间，达到事半功倍的效果。">
+<meta name="twitter:description" content="HTML图片热区Area map的用法只是在上学的时候学习到过，在实际工作中一直没用过，如果 不是这次紧急任务，可能永远都不会想起这个功能。在一些特殊的html页面布局中巧用area，能省好多时间，达到事半功倍的效果。">
 
 
 <link rel="stylesheet" type="text/css" href="/css/style.css?v=2.1.0">
@@ -183,12 +183,18 @@
     </header>
 
     
+      <div class="post-toc" id="post-toc">
+        <h2 class="post-toc-title">Contents</h2>
+        <div class="post-toc-content">
+          <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#热点简介"><span class="toc-text">热点简介</span></a></li></ol>
+        </div>
+      </div>
+    
 
     <div class="post-content">
       
-        <p>   HTML图片热区Area map的用法只是在上学的时候学习到过，在实际工作中一直没用过，如果这次紧急任务，可能永远都不会想起这个功能。在正常的html页面布局中巧用area，能省好多时间，达到事半功倍的效果。<br>   <a id="more"></a></p>
-<pre><code>#### &lt;area&gt;热点简介
-&lt;area&gt;标记
+        <p>   HTML图片热区Area map的用法只是在上学的时候学习到过，在实际工作中一直没用过，如果 不是这次紧急任务，可能永远都不会想起这个功能。在一些特殊的html页面布局中巧用area，能省好多时间，达到事半功倍的效果。<br>   <a id="more"></a></p>
+<h4 id="热点简介"><a href="#热点简介" class="headerlink" title="热点简介"></a><area>热点简介</h4><pre><code>&lt;area&gt;标记
 主要用于图像地图，通过该标记可以再图像地图中设定作用区域（热点），这样当用户鼠标移到指定作用区域时，鼠标默认会显示成&lt;a&gt;链接样式，点击会自动链接到预设好的页面，或者如果设置了onclick事件，会响应相应的点击事件。
 基本语法结构：
 </code></pre><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">"planets.jpg"</span> <span class="attr">border</span>=<span class="string">"0"</span> <span class="attr">usemap</span>=<span class="string">"#planetmap"</span> <span class="attr">alt</span>=<span class="string">"Planets"</span> /&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">map</span> <span class="attr">name</span>=<span class="string">"planetmap"</span> <span class="attr">id</span>=<span class="string">"planetmap"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">area</span> <span class="attr">shape</span>=<span class="string">"circle"</span> <span class="attr">coords</span>=<span class="string">"180,139,14"</span> <span class="attr">href</span> =<span class="string">"venus.html"</span> <span class="attr">alt</span>=<span class="string">"Venus"</span> /&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">area</span> <span class="attr">shape</span>=<span class="string">"circle"</span> <span class="attr">coords</span>=<span class="string">"129,161,10"</span> <span class="attr">href</span> =<span class="string">"mercur.html"</span> <span class="attr">alt</span>=<span class="string">"Mercury"</span> /&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">area</span> <span class="attr">shape</span>=<span class="string">"rect"</span> <span class="attr">coords</span>=<span class="string">"0,0,110,260"</span> <span class="attr">href</span> =<span class="string">"sun.html"</span> <span class="attr">alt</span>=<span class="string">"Sun"</span> /&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">map</span>&gt;</span></div></pre></td></tr></table></figure>
