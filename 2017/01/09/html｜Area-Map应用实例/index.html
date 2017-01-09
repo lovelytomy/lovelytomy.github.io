@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="">
+  <head>
+    <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+  <meta name="description" content="html｜Area-Map应用实例">
+
+
+
+
+  <meta name="keywords" content="HTML,Area,Map,">
+
+
+
+
+  <link rel="alternate" href="/use `atom.xml`" title="tomy’s  little world">
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/tutu.jpg?v=2.1.0">
+
+
+
+<link rel="canonical" href="http://tomys.win/2017/01/09/html｜Area-Map应用实例/">
+
+
+<meta name="description" content="HTML图片热区Area map的用法只是在上学的时候学习到过，在实际工作中一直没用过，如果这次紧急任务，可能永远都不会想起这个功能。在正常的html页面布局中巧用area，能省好多时间，达到事半功倍的效果。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="html｜Area-Map应用实例">
+<meta property="og:url" content="http://tomys.win/2017/01/09/html｜Area-Map应用实例/index.html">
+<meta property="og:site_name" content="tomy’s  little world">
+<meta property="og:description" content="HTML图片热区Area map的用法只是在上学的时候学习到过，在实际工作中一直没用过，如果这次紧急任务，可能永远都不会想起这个功能。在正常的html页面布局中巧用area，能省好多时间，达到事半功倍的效果。">
+<meta property="og:updated_time" content="2017-01-09T03:07:13.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="html｜Area-Map应用实例">
+<meta name="twitter:description" content="HTML图片热区Area map的用法只是在上学的时候学习到过，在实际工作中一直没用过，如果这次紧急任务，可能永远都不会想起这个功能。在正常的html页面布局中巧用area，能省好多时间，达到事半功倍的效果。">
+
+
+<link rel="stylesheet" type="text/css" href="/css/style.css?v=2.1.0">
+
+
+
+  <link rel="stylesheet" type="text/css" href="/lib/fancybox/jquery.fancybox.css">
+
+
+
+
+  
+
+
+
+    <title> html｜Area-Map应用实例 · tomy’s  little world </title>
+  </head>
+
+  <body>
+    <div class="container">
+      <header id="header" class="header"><div class="logo-wrapper">
+  <a href="/." class="logo">tomy’s  little world</a>
+</div>
+
+<nav class="site-nav">
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item">
+          <a class="menu-item-link" href="/">
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item">
+          <a class="menu-item-link" href="/archives/">
+            Archives
+          </a>
+        </li>
+      
+        
+        <li class="menu-item">
+          <a class="menu-item-link" href="/tags">
+            Tags
+          </a>
+        </li>
+      
+        
+        <li class="menu-item">
+          <a class="menu-item-link" href="/categories">
+            Categories
+          </a>
+        </li>
+      
+        
+        <li class="menu-item">
+          <a class="menu-item-link" href="/about">
+            About
+          </a>
+        </li>
+      
+      
+        <li class="menu-search">
+          <form>
+            <i class="iconfont icon-search" id="open-search"></i>
+            <input type="text" class="search-input" id="search-input">
+            <i class="iconfont icon-close" id="close-search"></i>
+          </form>
+        </li>
+      
+    </ul>
+  
+</nav>
+
+<div class="mobile-navbar">
+  <div class="mobile-header">
+    <div class="mobile-header-logo">
+      <a href="/." class="logo">tomy’s  little world</a>
+    </div>
+
+    <div class="mobile-header-icon">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </div>
+  <nav class="mobile-menu">
+    
+      
+      <a class="mobile-menu-item" href="/">
+        Home
+      </a>
+    
+      
+      <a class="mobile-menu-item" href="/archives/">
+        Archives
+      </a>
+    
+      
+      <a class="mobile-menu-item" href="/tags">
+        Tags
+      </a>
+    
+      
+      <a class="mobile-menu-item" href="/categories">
+        Categories
+      </a>
+    
+      
+      <a class="mobile-menu-item" href="/about">
+        About
+      </a>
+    
+  </nav>
+</div>
+      </header>
+
+      <main id="main" class="main">
+        <div class="content-wrapper">
+          <div id="content" class="content">
+            
+  
+  <article class="post">
+    <header class="post-header">
+      <h1 class="post-title">
+        
+          html｜Area-Map应用实例
+        
+      </h1>
+
+      <div class="post-meta">
+        <span class="post-time">
+          Jan 9, 2017
+        </span>
+      </div>
+    </header>
+
+    
+
+    <div class="post-content">
+      
+        <p>   HTML图片热区Area map的用法只是在上学的时候学习到过，在实际工作中一直没用过，如果这次紧急任务，可能永远都不会想起这个功能。在正常的html页面布局中巧用area，能省好多时间，达到事半功倍的效果。<br>   <a id="more"></a></p>
+<pre><code>#### &lt;area&gt;热点简介
+&lt;area&gt;标记
+主要用于图像地图，通过该标记可以再图像地图中设定作用区域（热点），这样当用户鼠标移到指定作用区域时，鼠标默认会显示成&lt;a&gt;链接样式，点击会自动链接到预设好的页面，或者如果设置了onclick事件，会响应相应的点击事件。
+基本语法结构：
+</code></pre><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">"planets.jpg"</span> <span class="attr">border</span>=<span class="string">"0"</span> <span class="attr">usemap</span>=<span class="string">"#planetmap"</span> <span class="attr">alt</span>=<span class="string">"Planets"</span> /&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">map</span> <span class="attr">name</span>=<span class="string">"planetmap"</span> <span class="attr">id</span>=<span class="string">"planetmap"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">area</span> <span class="attr">shape</span>=<span class="string">"circle"</span> <span class="attr">coords</span>=<span class="string">"180,139,14"</span> <span class="attr">href</span> =<span class="string">"venus.html"</span> <span class="attr">alt</span>=<span class="string">"Venus"</span> /&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">area</span> <span class="attr">shape</span>=<span class="string">"circle"</span> <span class="attr">coords</span>=<span class="string">"129,161,10"</span> <span class="attr">href</span> =<span class="string">"mercur.html"</span> <span class="attr">alt</span>=<span class="string">"Mercury"</span> /&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">area</span> <span class="attr">shape</span>=<span class="string">"rect"</span> <span class="attr">coords</span>=<span class="string">"0,0,110,260"</span> <span class="attr">href</span> =<span class="string">"sun.html"</span> <span class="attr">alt</span>=<span class="string">"Sun"</span> /&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">map</span>&gt;</span></div></pre></td></tr></table></figure>
+      
+    </div>
+
+    
+      <footer class="post-footer">
+        <div class="post-tags">
+          
+            <a href="/tags/HTML/">HTML</a>
+          
+            <a href="/tags/Area/">Area</a>
+          
+            <a href="/tags/Map/">Map</a>
+          
+        </div>
+
+        
+  <nav class="post-nav">
+    
+    
+      <a class="next" href="/2017/01/06/css|由食堂菜谱引发的垂直居中/">
+        <span class="next-text nav-default">css｜由食堂菜谱引发的垂直居中</span>
+        <span class="prev-text nav-mobile">Next</span>
+        <i class="iconfont icon-right"></i>
+      </a>
+    
+  </nav>
+
+      </footer>
+    
+  </article>
+
+
+          </div>
+          
+  <div class="comments" id="comments">
+    
+      <div id="disqus_thread">
+        <noscript>
+          Please enable JavaScript to view the
+          <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a>
+        </noscript>
+      </div>
+    
+  </div>
+
+        </div>  
+      </main>
+
+      <footer id="footer" class="footer">
+  <div class="social-links">
+    
+      
+        
+          <a href="mailto:535303865@qq.com" class="iconfont icon-email" title="email"></a>
+        
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+        
+          <a href="http://weibo.com/tomytianqi" class="iconfont icon-weibo" title="weibo"></a>
+        
+      
+    
+      
+    
+    
+    
+      <a href="/use `atom.xml`" class="iconfont icon-rss" title="rss"></a>
+    
+  </div>
+
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://hexo.io/">Hexo</a>
+  </span>
+  
+  <span class="theme-info">
+    Theme - 
+    <a class="theme-link" href="https://github.com/ahonn/hexo-theme-even">Even</a>
+  </span>
+
+  <span class="copyright-year">
+    
+    &copy; 
+     
+      2016 - 
+    
+    2017
+
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">tomy</span>
+  </span>
+</div>
+      </footer>
+
+      <div class="back-to-top" id="back-to-top">
+        <i class="iconfont icon-up"></i>
+      </div>
+    </div>
+
+    
+
+  <script type="text/javascript">
+    var disqus_config = function () {
+        this.page.url = 'http://tomys.win/2017/01/09/html｜Area-Map应用实例/';
+        this.page.identifier = '2017/01/09/html｜Area-Map应用实例/';
+        this.page.title = 'html｜Area-Map应用实例';
+    };
+    (function() {
+    var d = document, s = d.createElement('script');
+
+    s.src = '//tomy.disqus.com/embed.js';
+
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+    })();  
+  </script>
+
+
+    
+  
+
+
+
+
+
+  
+    <script type="text/javascript" src="/lib/jquery/jquery-3.1.1.min.js"></script>
+  
+
+  
+    <script type="text/javascript" src="/lib/fancybox/jquery.fancybox.pack.js"></script>
+  
+
+    <script type="text/javascript" src="/js/src/even.js?v=2.1.0"></script>
+<script type="text/javascript" src="/js/src/bootstrap.js?v=2.1.0"></script>
+
+  </body>
+</html>

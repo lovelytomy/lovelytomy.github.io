@@ -4,6 +4,17 @@
   
     
     <entry>
+      <title><![CDATA[html｜Area-Map应用实例]]></title>
+      <url>http://tomys.win/2017/01/09/html%EF%BD%9CArea-Map%E5%BA%94%E7%94%A8%E5%AE%9E%E4%BE%8B/</url>
+      <content type="html"><![CDATA[<p>   HTML图片热区Area map的用法只是在上学的时候学习到过，在实际工作中一直没用过，如果这次紧急任务，可能永远都不会想起这个功能。在正常的html页面布局中巧用area，能省好多时间，达到事半功倍的效果。<br>   <a id="more"></a></p>
+<pre><code>#### &lt;area&gt;热点简介
+&lt;area&gt;标记
+主要用于图像地图，通过该标记可以再图像地图中设定作用区域（热点），这样当用户鼠标移到指定作用区域时，鼠标默认会显示成&lt;a&gt;链接样式，点击会自动链接到预设好的页面，或者如果设置了onclick事件，会响应相应的点击事件。
+基本语法结构：
+</code></pre><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">"planets.jpg"</span> <span class="attr">border</span>=<span class="string">"0"</span> <span class="attr">usemap</span>=<span class="string">"#planetmap"</span> <span class="attr">alt</span>=<span class="string">"Planets"</span> /&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">map</span> <span class="attr">name</span>=<span class="string">"planetmap"</span> <span class="attr">id</span>=<span class="string">"planetmap"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">area</span> <span class="attr">shape</span>=<span class="string">"circle"</span> <span class="attr">coords</span>=<span class="string">"180,139,14"</span> <span class="attr">href</span> =<span class="string">"venus.html"</span> <span class="attr">alt</span>=<span class="string">"Venus"</span> /&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">area</span> <span class="attr">shape</span>=<span class="string">"circle"</span> <span class="attr">coords</span>=<span class="string">"129,161,10"</span> <span class="attr">href</span> =<span class="string">"mercur.html"</span> <span class="attr">alt</span>=<span class="string">"Mercury"</span> /&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">area</span> <span class="attr">shape</span>=<span class="string">"rect"</span> <span class="attr">coords</span>=<span class="string">"0,0,110,260"</span> <span class="attr">href</span> =<span class="string">"sun.html"</span> <span class="attr">alt</span>=<span class="string">"Sun"</span> /&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">map</span>&gt;</span></div></pre></td></tr></table></figure>]]></content>
+    </entry>
+    
+    <entry>
       <title><![CDATA[css｜由食堂菜谱引发的垂直居中]]></title>
       <url>http://tomys.win/2017/01/06/css%7C%E7%94%B1%E9%A3%9F%E5%A0%82%E8%8F%9C%E8%B0%B1%E5%BC%95%E5%8F%91%E7%9A%84%E5%9E%82%E7%9B%B4%E5%B1%85%E4%B8%AD/</url>
       <content type="html"><![CDATA[<p>   美工设计了一个食堂每周菜谱的PSD（如图1），本来这个页面用原生iOS实现并不难，但这个偏偏是微信网页用的，许久未写html代码，所以有些手生，遇到的最大问题是列表左侧的的内容在单元格中垂直居中，虽然网上有很多关于div内容垂直居中的文章，但是大多数情况下都是在已知div高度的情况下实现的，但是这个设计中，右侧的菜谱内容不固定，所以高度也不固定，因此没有办法按照一般的垂直居中来实现。<br>   <a id="more"></a><br>   <img src="http://7xrmmr.com1.z0.glb.clouddn.com/tomys/3%E6%9C%AC%E5%91%A8%E9%A3%9F%E8%B0%B1.jpg" alt="图1"></p>
