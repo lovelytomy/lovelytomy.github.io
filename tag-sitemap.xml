@@ -72,13 +72,6 @@
     </url>
 
     <url>
-        <loc>http://tomys.win/tags/CSS/</loc>
-        <lastmod>2017-01-06T06:04:03.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>http://tomys.win/tags/HTML/</loc>
         <lastmod>2017-01-09T06:35:14.000Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -95,6 +88,13 @@
     <url>
         <loc>http://tomys.win/tags/Map/</loc>
         <lastmod>2017-01-09T06:35:14.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://tomys.win/tags/CSS/</loc>
+        <lastmod>2017-01-10T01:39:01.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
