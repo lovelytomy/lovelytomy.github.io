@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://tomys.win/"/>
-  <updated>2017-01-11T04:47:14.000Z</updated>
+  <updated>2017-01-11T05:02:58.000Z</updated>
   <id>http://tomys.win/</id>
   
   <author>
@@ -20,14 +20,14 @@
     <link href="http://tomys.win/2017/01/11/%E5%A6%82%E4%BD%95%E5%B0%86%E4%B8%80%E5%BC%A0%E5%9B%BE%E7%89%87%E7%BB%9D%E5%AF%B9%E5%AE%9A%E4%BD%8D%E5%88%B0%E9%A1%B5%E9%9D%A2%E5%8F%B3%E4%B8%8B%E8%A7%92/"/>
     <id>http://tomys.win/2017/01/11/如何将一张图片绝对定位到页面右下角/</id>
     <published>2017-01-11T11:03:00.000Z</published>
-    <updated>2017-01-11T04:47:14.000Z</updated>
+    <updated>2017-01-11T05:02:58.000Z</updated>
     
-    <content type="html"><![CDATA[<p>&emsp;&emsp;之前做一个html页面，有一个样式是一个图片位于右下角，一开始用绝对定位做好了，可是真正用到微信上时出问题了，将那个div绝对定位其实是相对于当前可视窗口的绝对定位，而当页面长度大于一屏的长度时，这个div就比预想的位置高了，而且会遮挡一些UI控件，很纠结。当时紧急做了两个方案，暂时解决了这个遮挡的问题。最近看《css揭秘》，看到了几个更优的方法，所以想记录下来。<br>   <a id="more"></a></p>
-<div align="center"><img src="http://7xrmmr.com1.z0.glb.clouddn.com/tomys/%E6%8A%A5%E5%90%8D%E8%A1%A8%E6%89%8B%E6%9C%BA.png" width="375" height="667" alt="设计图"></div>]]></content>
+    <content type="html"><![CDATA[<p>&emsp;&emsp;之前做一个html页面，有一个样式是需要将一个图片始终置于右下角，一开始用绝对定位做好了，可是真正用到微信上时出问题了，原来<code>将div用position:absolute绝对定位其实是相对于当前可视窗口的绝对定位</code>，而当页面长度大于一屏的长度时，这个div就比预想的位置高了，而且会遮挡一些UI控件，很纠结。当时紧急做了两个方案，暂时解决了这个遮挡的问题。最近看《css揭秘》，看到了几个更优的方法，所以想记录下来。<br>   <a id="more"></a></p>
+<div align="center"><img src="http://7xrmmr.com1.z0.glb.clouddn.com/tomys/%E6%8A%A5%E5%90%8D%E8%A1%A8%E6%89%8B%E6%9C%BA.png" width="375" height="667" alt="设计图"><div>原设计图</div></div>]]></content>
     
     <summary type="html">
     
-      &lt;p&gt;&amp;emsp;&amp;emsp;之前做一个html页面，有一个样式是一个图片位于右下角，一开始用绝对定位做好了，可是真正用到微信上时出问题了，将那个div绝对定位其实是相对于当前可视窗口的绝对定位，而当页面长度大于一屏的长度时，这个div就比预想的位置高了，而且会遮挡一些UI控件，很纠结。当时紧急做了两个方案，暂时解决了这个遮挡的问题。最近看《css揭秘》，看到了几个更优的方法，所以想记录下来。&lt;br&gt;
+      &lt;p&gt;&amp;emsp;&amp;emsp;之前做一个html页面，有一个样式是需要将一个图片始终置于右下角，一开始用绝对定位做好了，可是真正用到微信上时出问题了，原来&lt;code&gt;将div用position:absolute绝对定位其实是相对于当前可视窗口的绝对定位&lt;/code&gt;，而当页面长度大于一屏的长度时，这个div就比预想的位置高了，而且会遮挡一些UI控件，很纠结。当时紧急做了两个方案，暂时解决了这个遮挡的问题。最近看《css揭秘》，看到了几个更优的方法，所以想记录下来。&lt;br&gt;
     
     </summary>
     

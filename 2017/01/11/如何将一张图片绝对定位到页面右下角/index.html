@@ -33,17 +33,17 @@
 <link rel="canonical" href="http://tomys.win/2017/01/11/如何将一张图片绝对定位到页面右下角/">
 
 
-<meta name="description" content="&amp;emsp;&amp;emsp;之前做一个html页面，有一个样式是一个图片位于右下角，一开始用绝对定位做好了，可是真正用到微信上时出问题了，将那个div绝对定位其实是相对于当前可视窗口的绝对定位，而当页面长度大于一屏的长度时，这个div就比预想的位置高了，而且会遮挡一些UI控件，很纠结。当时紧急做了两个方案，暂时解决了这个遮挡的问题。最近看《css揭秘》，看到了几个更优的方法，所以想记录下来。">
+<meta name="description" content="&amp;emsp;&amp;emsp;之前做一个html页面，有一个样式是需要将一个图片始终置于右下角，一开始用绝对定位做好了，可是真正用到微信上时出问题了，原来将div用position:absolute绝对定位其实是相对于当前可视窗口的绝对定位，而当页面长度大于一屏的长度时，这个div就比预想的位置高了，而且会遮挡一些UI控件，很纠结。当时紧急做了两个方案，暂时解决了这个遮挡的问题。最近看《css揭秘》，看">
 <meta property="og:type" content="article">
 <meta property="og:title" content="html｜如何将一张图片绝对定位到页面的右下角">
 <meta property="og:url" content="http://tomys.win/2017/01/11/如何将一张图片绝对定位到页面右下角/index.html">
 <meta property="og:site_name" content="tomy’s  little world">
-<meta property="og:description" content="&amp;emsp;&amp;emsp;之前做一个html页面，有一个样式是一个图片位于右下角，一开始用绝对定位做好了，可是真正用到微信上时出问题了，将那个div绝对定位其实是相对于当前可视窗口的绝对定位，而当页面长度大于一屏的长度时，这个div就比预想的位置高了，而且会遮挡一些UI控件，很纠结。当时紧急做了两个方案，暂时解决了这个遮挡的问题。最近看《css揭秘》，看到了几个更优的方法，所以想记录下来。">
+<meta property="og:description" content="&amp;emsp;&amp;emsp;之前做一个html页面，有一个样式是需要将一个图片始终置于右下角，一开始用绝对定位做好了，可是真正用到微信上时出问题了，原来将div用position:absolute绝对定位其实是相对于当前可视窗口的绝对定位，而当页面长度大于一屏的长度时，这个div就比预想的位置高了，而且会遮挡一些UI控件，很纠结。当时紧急做了两个方案，暂时解决了这个遮挡的问题。最近看《css揭秘》，看">
 <meta property="og:image" content="http://7xrmmr.com1.z0.glb.clouddn.com/tomys/%E6%8A%A5%E5%90%8D%E8%A1%A8%E6%89%8B%E6%9C%BA.png">
-<meta property="og:updated_time" content="2017-01-11T04:47:14.000Z">
+<meta property="og:updated_time" content="2017-01-11T05:02:58.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="html｜如何将一张图片绝对定位到页面的右下角">
-<meta name="twitter:description" content="&amp;emsp;&amp;emsp;之前做一个html页面，有一个样式是一个图片位于右下角，一开始用绝对定位做好了，可是真正用到微信上时出问题了，将那个div绝对定位其实是相对于当前可视窗口的绝对定位，而当页面长度大于一屏的长度时，这个div就比预想的位置高了，而且会遮挡一些UI控件，很纠结。当时紧急做了两个方案，暂时解决了这个遮挡的问题。最近看《css揭秘》，看到了几个更优的方法，所以想记录下来。">
+<meta name="twitter:description" content="&amp;emsp;&amp;emsp;之前做一个html页面，有一个样式是需要将一个图片始终置于右下角，一开始用绝对定位做好了，可是真正用到微信上时出问题了，原来将div用position:absolute绝对定位其实是相对于当前可视窗口的绝对定位，而当页面长度大于一屏的长度时，这个div就比预想的位置高了，而且会遮挡一些UI控件，很纠结。当时紧急做了两个方案，暂时解决了这个遮挡的问题。最近看《css揭秘》，看">
 <meta name="twitter:image" content="http://7xrmmr.com1.z0.glb.clouddn.com/tomys/%E6%8A%A5%E5%90%8D%E8%A1%A8%E6%89%8B%E6%9C%BA.png">
 
 
@@ -188,8 +188,8 @@
 
     <div class="post-content">
       
-        <p>&emsp;&emsp;之前做一个html页面，有一个样式是一个图片位于右下角，一开始用绝对定位做好了，可是真正用到微信上时出问题了，将那个div绝对定位其实是相对于当前可视窗口的绝对定位，而当页面长度大于一屏的长度时，这个div就比预想的位置高了，而且会遮挡一些UI控件，很纠结。当时紧急做了两个方案，暂时解决了这个遮挡的问题。最近看《css揭秘》，看到了几个更优的方法，所以想记录下来。<br>   <a id="more"></a></p>
-<div align="center"><img src="http://7xrmmr.com1.z0.glb.clouddn.com/tomys/%E6%8A%A5%E5%90%8D%E8%A1%A8%E6%89%8B%E6%9C%BA.png" width="375" height="667" alt="设计图"></div>
+        <p>&emsp;&emsp;之前做一个html页面，有一个样式是需要将一个图片始终置于右下角，一开始用绝对定位做好了，可是真正用到微信上时出问题了，原来<code>将div用position:absolute绝对定位其实是相对于当前可视窗口的绝对定位</code>，而当页面长度大于一屏的长度时，这个div就比预想的位置高了，而且会遮挡一些UI控件，很纠结。当时紧急做了两个方案，暂时解决了这个遮挡的问题。最近看《css揭秘》，看到了几个更优的方法，所以想记录下来。<br>   <a id="more"></a></p>
+<div align="center"><img src="http://7xrmmr.com1.z0.glb.clouddn.com/tomys/%E6%8A%A5%E5%90%8D%E8%A1%A8%E6%89%8B%E6%9C%BA.png" width="375" height="667" alt="设计图"><div>原设计图</div></div>
       
     </div>
 
