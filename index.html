@@ -165,6 +165,43 @@
     <header class="post-header">
       <h1 class="post-title">
         
+          <a class="post-link" href="/2017/01/11/如何将一张图片绝对定位到页面右下角/">html｜如何将一张图片绝对定位到页面的右下角</a>
+        
+      </h1>
+
+      <div class="post-meta">
+        <span class="post-time">
+          Jan 11, 2017
+        </span>
+      </div>
+    </header>
+
+    
+
+    <div class="post-content">
+      
+        
+          
+        
+
+        
+          <p>&emsp;&emsp;之前做一个html页面，有一个样式是一个图片位于右下角，一开始用绝对定位做好了，可是真正用到微信上时出问题了，将那个div绝对定位其实是相对于当前可视窗口的绝对定位，而当页面长度大于一屏的长度时，这个div就比预想的位置高了，而且会遮挡一些UI控件，很纠结。当时紧急做了两个方案，暂时解决了这个遮挡的问题。最近看《css揭秘》，看到了几个更优的方法，所以想记录下来。<br>
+          <div class="read-more">
+            <a href="/2017/01/11/如何将一张图片绝对定位到页面右下角/" class="read-more-link">Read more..</a>
+          </div>
+        
+      
+    </p></div>
+
+    
+  </article>
+
+    
+      
+  <article class="post">
+    <header class="post-header">
+      <h1 class="post-title">
+        
           <a class="post-link" href="/2017/01/09/html｜Area-Map应用实例/">html｜Area-Map应用实例</a>
         
       </h1>
@@ -453,7 +490,7 @@
         
 
         
-          <p>&emsp;&emsp;HTML图片热区Area map的用法只是在上学的时候学习到过，在实际工作中一直没用过，如果 不是这次紧急任务，可能永远都不会想起这个功能。在一些特殊的html页面布局中巧用area，能省好多时间，达到事半功倍的效果。<br>
+          <p>&emsp;&emsp;之前做一个html页面，有一个样式是一个图片位于右下角，一开始用绝对定位做好了，可是真正用到微信上时出问题了，将那个div绝对定位其实是相对于当前可视窗口的绝对定位，而当页面长度大于一屏的长度时，这个div就比预想的位置高了，而且会遮挡一些UI控件，很纠结。当时紧急做了两个方案，暂时解决了这个遮挡的问题。最近看《css揭秘》，看到了几个更优的方法，所以想记录下来。<br>
           <div class="read-more">
             <a href="/2016/03/08/iOSTools/" class="read-more-link">Read more..</a>
           </div>
@@ -497,53 +534,6 @@
 </ul>
           <div class="read-more">
             <a href="/2016/03/03/douyuVideo/" class="read-more-link">Read more..</a>
-          </div>
-        
-      
-    </div>
-
-    
-  </article>
-
-    
-      
-  <article class="post">
-    <header class="post-header">
-      <h1 class="post-title">
-        
-          <a class="post-link" href="/2016/02/29/groupSummary160224/">群讨论记录2</a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <span class="post-time">
-          Feb 28, 2016
-        </span>
-      </div>
-    </header>
-
-    
-
-    <div class="post-content">
-      
-        
-          
-        
-
-        
-          <ul>
-<li>记录了群里2016-02-22至2016-02-28讨论的一些问题，如有错误还望告知。</li>
-</ul>
-<h5 id="1-关于Objective-C链式编程的“点语法”"><a href="#1-关于Objective-C链式编程的“点语法”" class="headerlink" title="1. 关于Objective-C链式编程的“点语法”"></a><strong>1. 关于Objective-C链式编程的“点语法”</strong></h5><figure class="highlight erlang"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">person.run();</div><div class="line">- <span class="params">(Person * (^)</span><span class="params">()</span>)run &#123;</div><div class="line">    </div><div class="line">    Person * <span class="params">(^block)</span><span class="params">()</span> = ^<span class="params">()</span>&#123;</div><div class="line">        NSLog<span class="params">(@<span class="string">"run"</span>)</span>;</div><div class="line">        return self;</div><div class="line">    &#125;;</div><div class="line">    return block;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<ul>
-<li>问题描述：对于链式编程有个疑问,run不是set get方法，为什么可以用点操作符？</li>
-<li>问题讨论：大概是因为.run返回block然后返回block(),文章<a href="http://www.knowsky.com/884137.html">iOS利用block实现链式编程方法</a>中指出：block具有一个函数的外观，又被当作一个变量。那么block就具备两个功能，第一：可以作为类的属性被’点’出来。第二：可以当作函数直接调用。下面逐个解释，第一个类的属性可以点出来，比如person.name;这很好理解，你一定见过，str.length;对吧。第二个呢，block作为一个变量，但是又可以把它当作指向函数的指针一样调用。</li>
-<li>追加问题：还有个问题,就是任何方法都可以用点操作调用, 例如 person.eat ,运行正常,但是调用时会有个警告.property access result unused - getters should not be used for side effect.这是什么意思?我以为点操作符调用都是只能用在set get方法上的</li>
-<li>追加问题结果：出现警告的原因就是点操作符会展开成get方法,而没变量来接收的话就会出现警告。无参方法才能点操作符调用,但是一般不这么用，有参数的方法就不能用点操作符了，因为编译器认为不是get方法，所以不带参数的方法,系统就认为是get方法。（这个是提问者自己后来经过查询测试得出的结论）</li>
-<li>304，602</li>
-</ul>
-          <div class="read-more">
-            <a href="/2016/02/29/groupSummary160224/" class="read-more-link">Read more..</a>
           </div>
         
       
