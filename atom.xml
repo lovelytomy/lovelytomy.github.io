@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://tomys.win/"/>
-  <updated>2017-01-12T02:32:35.000Z</updated>
+  <updated>2017-01-12T02:41:57.000Z</updated>
   <id>http://tomys.win/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://tomys.win/2017/01/11/%E5%A6%82%E4%BD%95%E5%B0%86%E4%B8%80%E5%BC%A0%E5%9B%BE%E7%89%87%E7%BB%9D%E5%AF%B9%E5%AE%9A%E4%BD%8D%E5%88%B0%E9%A1%B5%E9%9D%A2%E5%8F%B3%E4%B8%8B%E8%A7%92/"/>
     <id>http://tomys.win/2017/01/11/如何将一张图片绝对定位到页面右下角/</id>
     <published>2017-01-11T11:03:00.000Z</published>
-    <updated>2017-01-12T02:32:35.000Z</updated>
+    <updated>2017-01-12T02:41:57.000Z</updated>
     
     <content type="html"><![CDATA[<p>&emsp;&emsp;之前做一个html页面，有一个样式是需要将一个图片始终置于右下角，一开始用绝对定位做好了，可是真正用到微信上时出问题了，原来<code>将div用position:absolute绝对定位其实是相对于当前可视窗口的绝对定位</code>，而当页面长度大于一屏的长度时，这个div就比预想的位置高了，而且会遮挡一些UI控件，很纠结。当时紧急做了两个方案，暂时解决了这个遮挡的问题。最近看《css揭秘》，看到了几个更优的方法，所以想记录下来。<br>   <a id="more"></a></p>
 <div align="center"><img src="http://7xrmmr.com1.z0.glb.clouddn.com/tomys/%E6%8A%A5%E5%90%8D%E8%A1%A8%E6%89%8B%E6%9C%BA.png" width="375" height="667" alt="设计图"><div>原设计图</div></div>
@@ -47,15 +47,29 @@ background-position: right 10px bottom 10px;
 <pre><code>```padding: 10px;
 background: url(&quot;code-pirate.svg&quot;) no-repeat #58a
 bottom right; /* 或 100% 100% */ 
-background-origin: content-box;<figure class="highlight maxima"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">    </div><div class="line">在线编辑地址：http://play.csssecrets.io/<span class="built_in">background</span>-<span class="built_in">origin</span></div><div class="line"></div><div class="line">&amp;emsp;&amp;emsp;它的视觉效果跟上一段代买效果是完全一样的,但我们的代码变得更加 DRY 了。在必要时可以把这两种技巧组合起来!如果你想让偏 移量与内边距稍稍有些不同(比如稍微收敛或超出),那么可以在使用 <span class="built_in">background</span>-<span class="built_in">origin</span>: <span class="built_in">content</span>-<span class="built_in">box</span>的同时,再通过<span class="built_in">background</span>-<span class="built_in">position</span> 的扩展语法来设置这些额外的偏移量。</div><div class="line">以上节选自《css揭秘》，受此启发，我决定再次改一下我之前图片的实现方式。将bdStyle的css样式用`<span class="built_in">background</span>-<span class="built_in">origin</span>`方案实现，关键代码如下：</div></pre></td></tr></table></figure>
-
-.bodyStyle{
+background-origin: content-box;```
+</code></pre><p>在线编辑地址：<a href="http://play.csssecrets.io/background-origin" target="_blank" rel="external">http://play.csssecrets.io/background-origin</a></p>
+<p>&emsp;&emsp;它的视觉效果跟上一段代买效果是完全一样的,但我们的代码变得更加 DRY 了。在必要时可以把这两种技巧组合起来!如果你想让偏 移量与内边距稍稍有些不同(比如稍微收敛或超出),那么可以在使用 background-origin: content-box的同时,再通过background-position 的扩展语法来设置这些额外的偏移量。<br>以上节选自《css揭秘》，受此启发，我决定再次改一下我之前图片的实现方式。将bdStyle的css样式用<code>background-origin</code>方案实现，关键代码如下：</p>
+<pre><code>.bdStyle{
         background: url(images/zan_wx.png) no-repeat bottom right #FFFFFF;
         background-size:186px 188px;
         background-origin: content-box;
-     } ```
+     }
 </code></pre><ul>
-<li>具体代码参见<a href="https://github.com/lovelytomy/html-image-rightbottom/blob/master/biaomingbiao3.html" target="_blank" rel="external">报名表3</a>      </li>
+<li><p>具体代码参见<a href="https://github.com/lovelytomy/html-image-rightbottom/blob/master/biaomingbiao3.html" target="_blank" rel="external">报名表3</a>   </p>
+<h4 id="方式4-calc-方案"><a href="#方式4-calc-方案" class="headerlink" title="方式4. calc()方案"></a>方式4. calc()方案</h4><p>&emsp;&emsp;假如我们有一个需求：把背景图片定位到距离底边 10px 且 距离右边 20px 的位置。如果我们仍然以左上角偏移的思路来考虑,其实 就是希望它有一个100% - 20px的水平偏移量,以及100% - 10px的垂直 偏移量。谢天谢地,calc() 函数允许我们执行此类运算,它可以完美地在 background-position 属性中使用:</p>
+<pre><code>background: url(code-pirate.svg) no-repeat; 
+background-position: calc(100% - 20px) calc(100% - 10px);
+</code></pre><p>在线编辑地址：<a href="http://play.csssecrets.io/background-position-calc" target="_blank" rel="external">http://play.csssecrets.io/background-position-calc</a><br>以上节选自《css揭秘》。按照这个思路，我修改我自己页面中图片的实现方法，将bdStyle的css样式用<code>calc()</code>方案实现，关键代码如下：</p>
+</li>
+</ul>
+<pre><code>.bdStyle{
+        background: url(images/zan_wx.png) no-repeat bottom right #FFFFFF;
+        background-size:186px 188px;
+        background-position: calc(100% - 10px) calc(100%);
+     }
+</code></pre><ul>
+<li>具体代码参见<a href="https://github.com/lovelytomy/html-image-rightbottom/blob/master/biaomingbiao4.html" target="_blank" rel="external">报名表4</a>            </li>
 </ul>]]></content>
     
     <summary type="html">
