@@ -39,14 +39,11 @@ background-origin: content-box;```
         background-size:186px 188px;
         background-origin: content-box;
      }
-</code></pre><ul>
-<li><p>具体代码参见<a href="https://github.com/lovelytomy/html-image-rightbottom/blob/master/biaomingbiao3.html" target="_blank" rel="external">报名表3</a>   </p>
+</code></pre><p>具体代码参见<a href="https://github.com/lovelytomy/html-image-rightbottom/blob/master/biaomingbiao3.html" target="_blank" rel="external">报名表3</a>   </p>
 <h4 id="方式4-calc-方案"><a href="#方式4-calc-方案" class="headerlink" title="方式4. calc()方案"></a>方式4. calc()方案</h4><p>&emsp;&emsp;假如我们有一个需求：把背景图片定位到距离底边 10px 且 距离右边 20px 的位置。如果我们仍然以左上角偏移的思路来考虑,其实 就是希望它有一个100% - 20px的水平偏移量,以及100% - 10px的垂直 偏移量。谢天谢地,calc() 函数允许我们执行此类运算,它可以完美地在 background-position 属性中使用:</p>
 <pre><code>background: url(code-pirate.svg) no-repeat; 
 background-position: calc(100% - 20px) calc(100% - 10px);
-</code></pre><p>在线编辑地址：<a href="http://play.csssecrets.io/background-position-calc" target="_blank" rel="external">http://play.csssecrets.io/background-position-calc</a><br>以上节选自《css揭秘》。按照这个思路，我修改我自己页面中图片的实现方法，将bdStyle的css样式用<code>calc()</code>方案实现，关键代码如下：</p>
-</li>
-</ul>
+</code></pre><p>  在线编辑地址：<a href="http://play.csssecrets.io/background-position-calc" target="_blank" rel="external">http://play.csssecrets.io/background-position-calc</a><br>以上节选自《css揭秘》。按照这个思路，我修改我自己页面中图片的实现方法，将bdStyle的css样式用<code>calc()</code>方案实现，关键代码如下：</p>
 <pre><code>.bdStyle{
         background: url(images/zan_wx.png) no-repeat bottom right #FFFFFF;
         background-size:186px 188px;
