@@ -15,14 +15,12 @@
 <p>&emsp;&emsp;最后一步,我们还需要提供一个合适的回退方案。因为对上述方案来 说,在不支持 background-position 扩展语法的浏览器中,背景图片会紧 贴在左上角(背景图片的默认位置)。这看起来会很奇怪,而且它会干扰到 文字的可读性(参见图 2-12)。提供一个回退方案也很简单,就是把老套的 bottom right定位值写进background的简写属性中:</p>
 <p><div align="center"><img src="http://7xrmmr.com1.z0.glb.clouddn.com/tomys/%E7%94%B5%E8%84%911.jpg" width="210" height="411" alt="设计图"><div>图2</div></div><br><figure class="highlight mipsasm"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">background: </span>url(code-pirate.svg) no-repeat <span class="keyword">bottom </span>right <span class="comment">#58a;</span></div><div class="line"><span class="keyword">background-position: </span>right <span class="number">20</span>px <span class="keyword">bottom </span><span class="number">10</span>px<span class="comment">;</span></div></pre></td></tr></table></figure></p>
 <p>在线编辑地址：<a href="http://play.csssecrets.io/extended-bg-position" target="_blank" rel="external">http://play.csssecrets.io/extended-bg-position</a><br>以上摘自《css揭秘》，受此启发，我决定改一下我之前图片的实现方式。将展示图片的div代码块去掉，给body增加一个名为bdStyle的css样式属性来实现右下角图片定位问题。关键代码如下： </p>
-<hr>
 <pre><code>.bodyStyle{
         background: url(images/zan_wx.png) no-repeat bottom right #FFFFFF;
         background-size:186px 188px;
         background-position: right 10px bottom 0px;
      }
-</code></pre><hr>
-<ul>
+</code></pre><ul>
 <li>具体代码参见<a href="https://github.com/lovelytomy/html-image-rightbottom/blob/master/biaomingbiao2.html" target="_blank" rel="external">报名表1</a></li>
 </ul>
 <h4 id="方式3-background-origin方案"><a href="#方式3-background-origin方案" class="headerlink" title="方式3. background-origin方案"></a>方式3. background-origin方案</h4><p>&emsp;&emsp;在给背景图片设置距离某个角的偏移量时,有一种情况极其常见:偏移量与容器的内边距一致。如果采用上面提到的 background-position的扩展语法方案,代码看起来会是这样的:</p>
