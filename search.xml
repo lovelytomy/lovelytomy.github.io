@@ -14,8 +14,9 @@
 <h4 id="方式2-background-position的扩展语法方案"><a href="#方式2-background-position的扩展语法方案" class="headerlink" title="方式2. background-position的扩展语法方案"></a>方式2. background-position的扩展语法方案</h4><p>&emsp;&emsp;在 CSS 背景与边框(第三版)(<a href="http://w3.org/TR/css3-background)中" target="_blank" rel="external">http://w3.org/TR/css3-background)中</a>, background-position 属性已经得到扩展,它允许我们指定背景图片距离任 意角的偏移量,只要我们在偏移量前面指定关键字。举例来说,如果想让背 景图片跟右边缘保持 20px 的偏移量,同时跟底边保持 10px 的偏移量,可以 这样做(结果如图 2-11 所示):</p>
 <div align="center"><img src="http://7xrmmr.com1.z0.glb.clouddn.com/tomys/%E7%94%B5%E8%84%911.jpg" width="210" height="411" alt="设计图"><div>图2</div></div>
 
-<figure class="highlight plain"><figcaption><span>url(code-pirate.svg) no-repeat #58a;</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">background-position: right 20px bottom 10px;</div></pre></td></tr></table></figure>
-<p>&emsp;&emsp;最后一步,我们还需要提供一个合适的回退方案。因为对上述方案来 说,在不支持 background-position 扩展语法的浏览器中,背景图片会紧 贴在左上角(背景图片的默认位置)。这看起来会很奇怪,而且它会干扰到 文字的可读性(参见图 2-12)。提供一个回退方案也很简单,就是把老套的 bottom right定位值写进background的简写属性中:</p>
+<pre><code>background: url(code-pirate.svg) no-repeat #58a;
+background-position: right 20px bottom 10px;
+</code></pre><p>&emsp;&emsp;最后一步,我们还需要提供一个合适的回退方案。因为对上述方案来 说,在不支持 background-position 扩展语法的浏览器中,背景图片会紧 贴在左上角(背景图片的默认位置)。这看起来会很奇怪,而且它会干扰到 文字的可读性(参见图 2-12)。提供一个回退方案也很简单,就是把老套的 bottom right定位值写进background的简写属性中:</p>
 <div align="center"><img src="http://7xrmmr.com1.z0.glb.clouddn.com/tomys/%E7%94%B5%E8%84%911.jpg" width="210" height="411" alt="设计图"><div>图2</div></div>
 
 <pre><code>background: url(code-pirate.svg) no-repeat bottom right #58a;
