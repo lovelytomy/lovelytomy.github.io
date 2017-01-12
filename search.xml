@@ -17,7 +17,7 @@
 <figure class="highlight less"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">background</span>: url(<span class="string">code-pirate.svg</span>) no-repeat <span class="number">#58a</span>;</div><div class="line"><span class="attribute">background-position</span>: right <span class="number">20px</span> bottom <span class="number">10px</span>;</div></pre></td></tr></table></figure>
 <p>&emsp;&emsp;最后一步,我们还需要提供一个合适的回退方案。因为对上述方案来 说,在不支持 background-position 扩展语法的浏览器中,背景图片会紧 贴在左上角(背景图片的默认位置)。这看起来会很奇怪,而且它会干扰到 文字的可读性(参见图6)。提供一个回退方案也很简单,就是把老套的 bottom right定位值写进background的简写属性中:</p>
 <p><div align="center"><img src="http://7xrmmr.com1.z0.glb.clouddn.com/tomys/tu6.jpg" width="179" height="111" alt="设计图"><div>图6</div></div><br><figure class="highlight mipsasm"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">background: </span>url(code-pirate.svg) no-repeat <span class="keyword">bottom </span>right <span class="comment">#58a;</span></div><div class="line"><span class="keyword">background-position: </span>right <span class="number">20</span>px <span class="keyword">bottom </span><span class="number">10</span>px<span class="comment">;</span></div></pre></td></tr></table></figure></p>
-<p>在线编辑地址：<a href="http://play.csssecrets.io/extended-bg-position" target="_blank" rel="external">http://play.csssecrets.io/extended-bg-position</a><br>以上摘自《css揭秘》，受此启发，我决定改一下我之前图片的实现方式。将展示图片的div代码块去掉，给body增加一个名为bdStyle的css样式属性来实现右下角图片定位问题。关键代码如下： </p>
+<p>在线编辑地址：<a href="http://play.csssecrets.io/extended-bg-position" target="_blank" rel="external">http://play.csssecrets.io/extended-bg-position</a><br>&emsp;&emsp;以上摘自《css揭秘》，受此启发，我决定改一下我之前图片的实现方式。将展示图片的div代码块去掉，给body增加一个名为bdStyle的css样式属性来实现右下角图片定位问题。关键代码如下： </p>
 <pre><code>.bdStyle{
         background: url(images/zan_wx.png) no-repeat bottom right #FFFFFF;
         background-size:186px 188px;
@@ -30,7 +30,7 @@
 <pre><code>padding: 10px;
 background: url(code-pirate.svg) no-repeat #58a; 
 background-position: right 10px bottom 10px;
-</code></pre><p>虽然也能达到我们想要的效果，但是每次改动内边距的值时，我们需要在三个地方更新，，可以通过一个更简单的办法实现这个需求：让它自动跟着我们设定的内边距走，而不用另外声明偏移量的值。<br>默认情况下,background-position 是以 padding box 为准的,这样边 框才不会遮住背景图片。因此,top left默认指的是padding box的左上 角。不过,在背景与边框(第三版)(<a href="http://w3.org/TR/css3-background)中" target="_blank" rel="external">http://w3.org/TR/css3-background)中</a>, 我们得到了一个新的属性 background-origin,可以用它来改变这种行为。 在默认情况下,它的值是(闭着眼睛也猜得到)padding-box。如果把它的 值改成 content-box(参见下面的代码),我们在 background-position 属 性中使用的边角关键字将会以内容区的边缘作为基准(也就是说,此时背景 图片距离边角的偏移量就跟内边距保持一致了):</p>
+</code></pre><p>&emsp;&emsp;虽然也能达到我们想要的效果，但是每次改动内边距的值时，我们需要在三个地方更新，，可以通过一个更简单的办法实现这个需求：让它自动跟着我们设定的内边距走，而不用另外声明偏移量的值。<br>&emsp;&emsp;默认情况下,background-position 是以 padding box 为准的,这样边 框才不会遮住背景图片。因此,top left默认指的是padding box的左上 角。不过,在背景与边框(第三版)(<a href="http://w3.org/TR/css3-background)中" target="_blank" rel="external">http://w3.org/TR/css3-background)中</a>, 我们得到了一个新的属性 background-origin,可以用它来改变这种行为。 在默认情况下,它的值是(闭着眼睛也猜得到)padding-box。如果把它的 值改成 content-box(参见下面的代码),我们在 background-position 属 性中使用的边角关键字将会以内容区的边缘作为基准(也就是说,此时背景 图片距离边角的偏移量就跟内边距保持一致了):</p>
 <pre><code>padding: 10px;
 background: url(&quot;code-pirate.svg&quot;) no-repeat #58a bottom right; /* 或 100% 100% */ 
 background-origin: content-box;
@@ -45,7 +45,7 @@ background-origin: content-box;
 <h4 id="方式4-calc-方案"><a href="#方式4-calc-方案" class="headerlink" title="方式4. calc()方案"></a>方式4. calc()方案</h4><p>&emsp;&emsp;假如我们有一个需求：把背景图片定位到距离底边 10px 且 距离右边 20px 的位置。如果我们仍然以左上角偏移的思路来考虑,其实 就是希望它有一个100% - 20px的水平偏移量,以及100% - 10px的垂直 偏移量。谢天谢地,calc() 函数允许我们执行此类运算,它可以完美地在 background-position 属性中使用:</p>
 <pre><code>background: url(code-pirate.svg) no-repeat; 
 background-position: calc(100% - 20px) calc(100% - 10px);
-</code></pre><p>  在线编辑地址：<a href="http://play.csssecrets.io/background-position-calc" target="_blank" rel="external">http://play.csssecrets.io/background-position-calc</a><br>以上节选自《css揭秘》。按照这个思路，我修改我自己页面中图片的实现方法，将bdStyle的css样式用<code>calc()</code>方案实现，关键代码如下：</p>
+</code></pre><p>  在线编辑地址：<a href="http://play.csssecrets.io/background-position-calc" target="_blank" rel="external">http://play.csssecrets.io/background-position-calc</a><br>&emsp;&emsp;以上节选自《css揭秘》。按照这个思路，我修改我自己页面中图片的实现方法，将bdStyle的css样式用<code>calc()</code>方案实现，关键代码如下：</p>
 <pre><code>.bdStyle{
         background: url(images/zan_wx.png) no-repeat bottom right #FFFFFF;
         background-size:186px 188px;
