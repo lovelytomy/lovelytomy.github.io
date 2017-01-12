@@ -31,16 +31,15 @@ background-position: right 10px bottom 10px;
 <pre><code>```padding: 10px;
 background: url(&quot;code-pirate.svg&quot;) no-repeat #58a
 bottom right; /* 或 100% 100% */ 
-background-origin: content-box;```
-</code></pre><p>在线编辑地址：<a href="http://play.csssecrets.io/background-origin" target="_blank" rel="external">http://play.csssecrets.io/background-origin</a></p>
-<p>&emsp;&emsp;它的视觉效果跟上一段代买效果是完全一样的,但我们的代码变得更加 DRY 了。在必要时可以把这两种技巧组合起来!如果你想让偏 移量与内边距稍稍有些不同(比如稍微收敛或超出),那么可以在使用 background-origin: content-box的同时,再通过background-position 的扩展语法来设置这些额外的偏移量。<br>以上节选自《css揭秘》，受此启发，我决定再次改一下我之前图片的实现方式。将bdStyle的css样式用<code>background-origin</code>方案实现，关键代码如下：</p>
-<pre><code>.bodyStyle{
+background-origin: content-box;<figure class="highlight maxima"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">    </div><div class="line">在线编辑地址：http://play.csssecrets.io/<span class="built_in">background</span>-<span class="built_in">origin</span></div><div class="line"></div><div class="line">&amp;emsp;&amp;emsp;它的视觉效果跟上一段代买效果是完全一样的,但我们的代码变得更加 DRY 了。在必要时可以把这两种技巧组合起来!如果你想让偏 移量与内边距稍稍有些不同(比如稍微收敛或超出),那么可以在使用 <span class="built_in">background</span>-<span class="built_in">origin</span>: <span class="built_in">content</span>-<span class="built_in">box</span>的同时,再通过<span class="built_in">background</span>-<span class="built_in">position</span> 的扩展语法来设置这些额外的偏移量。</div><div class="line">以上节选自《css揭秘》，受此启发，我决定再次改一下我之前图片的实现方式。将bdStyle的css样式用`<span class="built_in">background</span>-<span class="built_in">origin</span>`方案实现，关键代码如下：</div></pre></td></tr></table></figure>
+
+.bodyStyle{
         background: url(images/zan_wx.png) no-repeat bottom right #FFFFFF;
         background-size:186px 188px;
         background-origin: content-box;
-     }
+     } ```
 </code></pre><ul>
-<li>具体代码参见<a href="https://github.com/lovelytomy/html-image-rightbottom/blob/master/biaomingbiao3.html" target="_blank" rel="external">报名表1</a>      </li>
+<li>具体代码参见<a href="https://github.com/lovelytomy/html-image-rightbottom/blob/master/biaomingbiao3.html" target="_blank" rel="external">报名表3</a>      </li>
 </ul>]]></content>
     </entry>
     
