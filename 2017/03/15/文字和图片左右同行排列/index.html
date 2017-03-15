@@ -41,7 +41,7 @@
 <meta property="og:description" content="&amp;emsp;&amp;emsp;最近做几个html页面，有的地方需要文字与图片同行，如果是iOS原生布局就很简单了，设置UIButton的titleEdgeInsets就可以了，html页面当时做的时候有点儿费劲，不过还好搞定了，记录一下，其实也很简单。">
 <meta property="og:image" content="http://7xrmmr.com1.z0.glb.clouddn.com/tomys/WechatIMG3.jpeg">
 <meta property="og:image" content="http://7xrmmr.com1.z0.glb.clouddn.com/tomys/WechatIMG6.jpeg">
-<meta property="og:updated_time" content="2017-03-15T03:01:18.000Z">
+<meta property="og:updated_time" content="2017-03-15T03:02:50.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="html｜文字和图片左右同行排列">
 <meta name="twitter:description" content="&amp;emsp;&amp;emsp;最近做几个html页面，有的地方需要文字与图片同行，如果是iOS原生布局就很简单了，设置UIButton的titleEdgeInsets就可以了，html页面当时做的时候有点儿费劲，不过还好搞定了，记录一下，其实也很简单。">
@@ -208,7 +208,7 @@ span.more {
 ｝                
 </code></pre><p>&emsp;&emsp;其实关键代码就两点：1.将图片allow_r2.png设置为span的背景 2.padding设置图片向右偏移的位置大小。但是这种情况只适用于allow_r2.png图片的高度小于文字的高度，否则图片显示不全。</p>
 <h4 id="第二种-文字图片同行排列，图片高度比文字高"><a href="#第二种-文字图片同行排列，图片高度比文字高" class="headerlink" title="第二种. 文字图片同行排列，图片高度比文字高"></a>第二种. 文字图片同行排列，图片高度比文字高</h4><p>&emsp;&emsp;当图片比文字高度高时，可以借助div按照上面的思路处理:</p>
-<div align="center"><img src="http://7xrmmr.com1.z0.glb.clouddn.com/tomys/WechatIMG6.jpeg" width="200" height="65" alt="设计图"><div>图2</div></div>
+<div align="center"><img src="http://7xrmmr.com1.z0.glb.clouddn.com/tomys/WechatIMG6.jpeg" width="400" height="130" alt="设计图"><div>图2</div></div>
 
 <figure class="highlight applescript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">&lt;<span class="keyword">div</span> <span class="built_in">id</span>=<span class="string">"steps"</span> <span class="built_in">class</span>=<span class="string">"bottomLine"</span>&gt;</div><div class="line">	&lt;<span class="keyword">div</span> <span class="built_in">class</span>=<span class="string">"stepsDiv"</span>&gt;&lt;span <span class="built_in">class</span>=<span class="string">"commonSpan"</span>&gt;步数&lt;/span&gt;&lt;/<span class="keyword">div</span>&gt;</div><div class="line">	&lt;span <span class="built_in">class</span>=<span class="string">"numSpan"</span>&gt;<span class="number">4</span>&lt;/span&gt;</div><div class="line">	&lt;span <span class="built_in">class</span>=<span class="string">"commonSpan"</span>&gt;千米&lt;/span&gt;</div><div class="line">&lt;/<span class="keyword">div</span>&gt;</div><div class="line"></div><div class="line">.stepsDiv &#123;</div><div class="line">	display: inline;</div><div class="line">	float: left;</div><div class="line">	background: url(img/sportStatistics_steps.png) left no-<span class="keyword">repeat</span>;</div><div class="line">	padding: <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">30</span>px;</div><div class="line">	background-size: <span class="number">21</span>px <span class="number">22</span>px;</div><div class="line">	margin-left: <span class="number">24</span>px;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
       
