@@ -11,7 +11,7 @@
 
 
 
-  <meta name="description" content="html｜echarts3柱状图使用1">
+  <meta name="description" content="html｜echarts3折线图使用1">
 
 
 
@@ -30,19 +30,19 @@
 
 
 
-<link rel="canonical" href="http://tomys.win/2017/03/15/echarts3柱状图使用1/">
+<link rel="canonical" href="http://tomys.win/2018/01/14/echarts3折线图使用1/">
 
 
 <meta name="description" content="&amp;emsp;&amp;emsp;最近项目中用到了echarts3的图表展示，做一些样式的小结。echarts3官网地址:http://echarts.baidu.com/tutorial.html">
 <meta property="og:type" content="article">
-<meta property="og:title" content="html｜echarts3柱状图使用1">
-<meta property="og:url" content="http://tomys.win/2017/03/15/echarts3柱状图使用1/index.html">
+<meta property="og:title" content="html｜echarts3折线图使用1">
+<meta property="og:url" content="http://tomys.win/2018/01/14/echarts3折线图使用1/index.html">
 <meta property="og:site_name" content="tomy’s  little world">
 <meta property="og:description" content="&amp;emsp;&amp;emsp;最近项目中用到了echarts3的图表展示，做一些样式的小结。echarts3官网地址:http://echarts.baidu.com/tutorial.html">
 <meta property="og:image" content="http://7xrmmr.com1.z0.glb.clouddn.com/tomys/WechatIMG7.jpeg">
-<meta property="og:updated_time" content="2017-03-15T04:54:59.000Z">
+<meta property="og:updated_time" content="2018-01-04T01:42:25.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="html｜echarts3柱状图使用1">
+<meta name="twitter:title" content="html｜echarts3折线图使用1">
 <meta name="twitter:description" content="&amp;emsp;&amp;emsp;最近项目中用到了echarts3的图表展示，做一些样式的小结。echarts3官网地址:http://echarts.baidu.com/tutorial.html">
 <meta name="twitter:image" content="http://7xrmmr.com1.z0.glb.clouddn.com/tomys/WechatIMG7.jpeg">
 
@@ -60,7 +60,7 @@
 
 
 
-    <title> html｜echarts3柱状图使用1 · tomy’s  little world </title>
+    <title> html｜echarts3折线图使用1 · tomy’s  little world </title>
   </head>
 
   <body>
@@ -173,13 +173,13 @@
     <header class="post-header">
       <h1 class="post-title">
         
-          html｜echarts3柱状图使用1
+          html｜echarts3折线图使用1
         
       </h1>
 
       <div class="post-meta">
         <span class="post-time">
-          2017年3月15日
+          2018年1月14日
         </span>
       </div>
     </header>
@@ -188,7 +188,7 @@
       <div class="post-toc" id="post-toc">
         <h2 class="post-toc-title">文章目录</h2>
         <div class="post-toc-content">
-          <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-简单柱状图"><span class="toc-text">1. 简单柱状图</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-多个柱状图"><span class="toc-text">2.多个柱状图</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-柱状图渐变色"><span class="toc-text">3.柱状图渐变色</span></a></li></ol>
+          <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-简单折线图"><span class="toc-text">1. 简单折线图</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-设置折线图圆点"><span class="toc-text">2.设置折线图圆点</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-设置折线图线条"><span class="toc-text">3.设置折线图线条</span></a></li></ol>
         </div>
       </div>
     
@@ -196,7 +196,7 @@
     <div class="post-content">
       
         <p>&emsp;&emsp;最近项目中用到了echarts3的图表展示，做一些样式的小结。echarts3官网地址:<a href="http://echarts.baidu.com/tutorial.html" target="_blank" rel="external">http://echarts.baidu.com/tutorial.html</a><br>   <a id="more"></a></p>
-<h4 id="1-简单柱状图"><a href="#1-简单柱状图" class="headerlink" title="1. 简单柱状图"></a>1. 简单柱状图</h4><p>&emsp;&emsp;1.引入<code>echarts.min.js</code>文件</p>
+<h4 id="1-简单折线图"><a href="#1-简单折线图" class="headerlink" title="1. 简单折线图"></a>1. 简单折线图</h4><p>&emsp;&emsp;1.引入<code>echarts.min.js</code>文件</p>
 <figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"utf-8"</span>&gt;</span></div><div class="line">    <span class="comment">&lt;!-- 引入 ECharts 文件 --&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"echarts.min.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></div></pre></td></tr></table></figure>
 <p>&emsp;&emsp;2.在绘图前我们需要为 ECharts 准备一个具备高宽的 <code>DOM 容器</code>。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"> &lt;!-- 为 ECharts 准备一个具备大小（宽高）的 DOM --&gt;</div><div class="line"> &lt;div id=&quot;main&quot; style=&quot;width: 600px;height:400px;&quot;&gt;&lt;/div&gt;</div><div class="line">&lt;/body&gt;</div></pre></td></tr></table></figure>
@@ -205,7 +205,7 @@
 <p>&emsp;&emsp;这样一个单一的简单柱状图就完成了，你也可以直接进入 <a href="http://echarts.baidu.com/gallery/editor.html?c=doc-example/getting-started" target="_blank" rel="external">ECharts Gallery</a> 中查看编辑示例</p>
 <div align="center"><img src="http://7xrmmr.com1.z0.glb.clouddn.com/tomys/WechatIMG7.jpeg" alt="单一简单柱状图"><div>单一简单柱状图</div></div>
 
-<h4 id="2-多个柱状图"><a href="#2-多个柱状图" class="headerlink" title="2.多个柱状图"></a>2.多个柱状图</h4><h4 id="3-柱状图渐变色"><a href="#3-柱状图渐变色" class="headerlink" title="3.柱状图渐变色"></a>3.柱状图渐变色</h4>
+<h4 id="2-设置折线图圆点"><a href="#2-设置折线图圆点" class="headerlink" title="2.设置折线图圆点"></a>2.设置折线图圆点</h4><h4 id="3-设置折线图线条"><a href="#3-设置折线图线条" class="headerlink" title="3.设置折线图线条"></a>3.设置折线图线条</h4>
       
     </div>
 
@@ -220,15 +220,9 @@
         
   <nav class="post-nav">
     
-      <a class="prev" href="/2018/01/14/echarts3折线图使用1/">
-        <i class="iconfont icon-left"></i>
-        <span class="prev-text nav-default">html｜echarts3折线图使用1</span>
-        <span class="prev-text nav-mobile">上一篇</span>
-      </a>
     
-    
-      <a class="next" href="/2017/03/15/文字和图片左右同行排列/">
-        <span class="next-text nav-default">html｜文字和图片左右同行排列</span>
+      <a class="next" href="/2017/03/15/echarts3柱状图使用1/">
+        <span class="next-text nav-default">html｜echarts3柱状图使用1</span>
         <span class="prev-text nav-mobile">下一篇</span>
         <i class="iconfont icon-right"></i>
       </a>
@@ -323,9 +317,9 @@
 
   <script type="text/javascript">
     var disqus_config = function () {
-        this.page.url = 'http://tomys.win/2017/03/15/echarts3柱状图使用1/';
-        this.page.identifier = '2017/03/15/echarts3柱状图使用1/';
-        this.page.title = 'html｜echarts3柱状图使用1';
+        this.page.url = 'http://tomys.win/2018/01/14/echarts3折线图使用1/';
+        this.page.identifier = '2018/01/14/echarts3折线图使用1/';
+        this.page.title = 'html｜echarts3折线图使用1';
     };
     (function() {
     var d = document, s = d.createElement('script');
