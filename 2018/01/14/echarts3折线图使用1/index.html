@@ -40,7 +40,7 @@
 <meta property="og:site_name" content="tomy’s  little world">
 <meta property="og:description" content="&amp;emsp;&amp;emsp;最近项目中用到了echarts3的图表展示，做一些样式的小结。echarts3官网地址:http://echarts.baidu.com/tutorial.html">
 <meta property="og:image" content="http://7xrmmr.com1.z0.glb.clouddn.com/tomys/%E7%AE%80%E5%8D%95%E6%8A%98%E7%BA%BF%E5%9B%BE.png">
-<meta property="og:updated_time" content="2018-01-10T04:46:02.000Z">
+<meta property="og:updated_time" content="2018-01-10T04:54:33.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="html｜echarts3折线图使用1">
 <meta name="twitter:description" content="&amp;emsp;&amp;emsp;最近项目中用到了echarts3的图表展示，做一些样式的小结。echarts3官网地址:http://echarts.baidu.com/tutorial.html">
@@ -205,8 +205,10 @@
 <p>&emsp;&emsp;这样一个单一的简单折线图就完成了，与<a href="http://tomys.win/2017/03/15/echarts3柱状图使用1/">《echarts3柱状图使用1》</a>中简单柱状图的区别在于<code>将type由‘bar’改成‘line’即可</code></p>
 <div align="center"><img src="http://7xrmmr.com1.z0.glb.clouddn.com/tomys/%E7%AE%80%E5%8D%95%E6%8A%98%E7%BA%BF%E5%9B%BE.png" alt="单一简单折线图"><div>单一简单折线图</div></div>
 
-<h4 id="2-设置折线图圆点"><a href="#2-设置折线图圆点" class="headerlink" title="2.设置折线图圆点"></a>2.设置折线图圆点</h4><p>&emsp;&emsp;echarts 折线图默认折点处圆心颜色是白色，圆圈边框颜色与线条颜色一致，如果想把圆心颜色改变需要两步<br>1.将symbol设置为’circle’：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">```</div><div class="line"></div><div class="line">2.设置itemStyle:</div><div class="line"></div><div class="line">```  itemStyle:&#123;</div><div class="line">            normal:&#123;</div><div class="line">                color:&quot;#FFFF00&quot;,//设置圆心颜色</div><div class="line">            &#125;</div><div class="line">        &#125;</div></pre></td></tr></table></figure>
+<h4 id="2-设置折线图圆点"><a href="#2-设置折线图圆点" class="headerlink" title="2.设置折线图圆点"></a>2.设置折线图圆点</h4><p>&emsp;&emsp;echarts 折线图默认折点处圆心颜色是白色，圆圈边框颜色与线条颜色一致，如果想把圆心颜色改变需要两步<br><strong>1.将symbol设置为’circle’：</strong></p>
+<figure class="highlight groovy"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="string">symbol:</span><span class="string">'circle'</span><span class="comment">//设置圆心样式为circle</span></div></pre></td></tr></table></figure>
+<p><strong>2.设置itemStyle:</strong></p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">itemStyle</span>:&#123;</div><div class="line">            <span class="attribute">normal</span>:&#123;</div><div class="line">                color:<span class="string">"#FFFF00"</span>,//设置圆心颜色</div><div class="line">            &#125;</div><div class="line">        &#125;</div></pre></td></tr></table></figure>
 <p>3.由于默认</p>
 <h4 id="3-设置折线图线条"><a href="#3-设置折线图线条" class="headerlink" title="3.设置折线图线条"></a>3.设置折线图线条</h4>
       
