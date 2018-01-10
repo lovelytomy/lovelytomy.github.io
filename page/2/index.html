@@ -165,43 +165,6 @@
     <header class="post-header">
       <h1 class="post-title">
         
-          <a class="post-link" href="/2016/04/26/UIAlertView4KeyBoard/">iOS8＋ UIAlertView pop/push页面后，键盘闪一下的问题</a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <span class="post-time">
-          2016年4月26日
-        </span>
-      </div>
-    </header>
-
-    
-
-    <div class="post-content">
-      
-        
-          
-        
-
-        
-          <h4 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h4><p>   <code>如果当前页面有UITextField时使用UIAlertView，在pop或者push时，在新的页面键盘会弹出一下，再收回。</code>这个问题困扰了我很久，一开始没意识到这是iOS8系统以后导致的问题，因为当时接手这个项目的时候刚刚发布iOS8没多久，我的测试机还是iOS7，没有这个问题，只是在同事iOS8的手机上能见到，当时以为只是偶发现象觉得不严重也就没去处理。现在应用做扩展升级，发现这个问题几乎每个机子上都会发生，大部分的机子现在都是iOS8+和iOS9+。下午没事儿就想把这个由来已久的问题解决一下。网上搜到了导致这个现象的原因：<code>在ios8以后，苹果提倡使用UIAlertController而非UIAlertView,键盘收回动作需要0.25s的时间，而UIAlertView弹出是阻碍了键盘的收回动作。</code><br>由于目前应用还是要支持iOS7+所以不能全部换成UIAlertController，只好用一下折中的办法。<br>
-          <div class="read-more">
-            <a href="/2016/04/26/UIAlertView4KeyBoard/" class="read-more-link">更多…</a>
-          </div>
-        
-      
-    </p></div>
-
-    
-  </article>
-
-    
-      
-  <article class="post">
-    <header class="post-header">
-      <h1 class="post-title">
-        
           <a class="post-link" href="/2016/03/22/iOS_CustomFont/">iOS使用自定义字体</a>
         
       </h1>
@@ -262,13 +225,18 @@
         
 
         
-          <h4 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h4><p>   <code>如果当前页面有UITextField时使用UIAlertView，在pop或者push时，在新的页面键盘会弹出一下，再收回。</code>这个问题困扰了我很久，一开始没意识到这是iOS8系统以后导致的问题，因为当时接手这个项目的时候刚刚发布iOS8没多久，我的测试机还是iOS7，没有这个问题，只是在同事iOS8的手机上能见到，当时以为只是偶发现象觉得不严重也就没去处理。现在应用做扩展升级，发现这个问题几乎每个机子上都会发生，大部分的机子现在都是iOS8+和iOS9+。下午没事儿就想把这个由来已久的问题解决一下。网上搜到了导致这个现象的原因：<code>在ios8以后，苹果提倡使用UIAlertController而非UIAlertView,键盘收回动作需要0.25s的时间，而UIAlertView弹出是阻碍了键盘的收回动作。</code><br>由于目前应用还是要支持iOS7+所以不能全部换成UIAlertController，只好用一下折中的办法。<br>
+          <p>网上有很多关于怎么在iOS系统中添加自定义字体的文章，比如<a href="http://blog.csdn.net/heartofthesea/article/details/22289399">iOS使用自定义字体</a>和<a href="http://www.cnblogs.com/GnagWang/archive/2011/09/14/2176266.html">IOS中怎么使用微软雅黑字体</a> 但是要么就是太笼统要么就是有些许的错误，导致我为了简单的添加一个中文字体竟然浪费了近一个小时。所以，我参照这两篇文章，做一个总结。</p>
+<p>这两篇文章虽然都条理清晰地描述了怎样在iOS中添加自定义字体，但仍不能让人一次就能正确操作：</p>
+<ul>
+<li><a href="http://blog.csdn.net/heartofthesea/article/details/22289399">iOS使用自定义字体</a>没有说明怎样打印字体名称</li>
+<li><a href="http://www.cnblogs.com/GnagWang/archive/2011/09/14/2176266.html">IOS中怎么使用微软雅黑字体</a>虽然说明了怎样打印字体名称，但是写错了字体名称。</li>
+</ul>
           <div class="read-more">
             <a href="/2016/03/08/iOSTools/" class="read-more-link">更多…</a>
           </div>
         
       
-    </p></div>
+    </div>
 
     
   </article>
