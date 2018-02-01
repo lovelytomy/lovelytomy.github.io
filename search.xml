@@ -8,7 +8,16 @@
       <url>http://tomys.win/2018/02/01/%20iOS%E4%BD%BF%E7%94%A8%E6%95%85%E4%BA%8B%E6%9D%BF%EF%BC%88storyboards%EF%BC%89%E6%B7%BB%E5%8A%A0%E6%89%8B%E5%8A%BF/</url>
       <content type="html"><![CDATA[<p>&emsp;&emsp;以前一直用代码添加手势，最近开始学习<a href="http://samvlu.com/index.html" target="_blank" rel="external">Sam Lu’s 100 Days of Swift</a> 项目，顺便熟悉故事板的使用，发现UIButton添加手势方法并不像添加点击事件那么简单<br>   <a id="more"></a></p>
 <h4 id="1-添加手势"><a href="#1-添加手势" class="headerlink" title="1. 添加手势"></a>1. 添加手势</h4><p>&emsp;&emsp;在Xcode<code>库面板</code>的<code>对象库</code>底部的搜索框中输入手势名称：（如UILongPressGestureRecognizer直接输入long），选择手势库对象，拖动到故事板ViewControllerScene底部。</p>
-<div align="center"><img src="http://7xrmmr.com1.z0.glb.clouddn.com/tomys/Gesture1.gif" alt="添加手势图"><div>添加手势图</div></div><br>#### 2. 添加手势Action<br>&emsp;&emsp;在Xcode中打开<code>辅助编辑器</code>;选中刚才添加的UILongPressGestureRecognizer，按住Control键的同时，拖动UILongPressGestureRecognizer到代码页面;在弹出的提示框中选择<code>Connection</code>为Action，<code>type</code>为UILongPressGestureRecognizer，填写<code>name</code>，点击<code>Connect</code>;<br><div align="center"><img src="http://7xrmmr.com1.z0.glb.clouddn.com/tomys/Gesture2.gif" alt="添加手势图"><div>添加手势图</div></div><br>#### 3. 关联手势和控件<br>&emsp;&emsp;在Xcode中点击要添加手势的控件，打开<code>连接检查器</code>;选中<code>gestureRecognizes</code>右边的小圆圈（会变成+号）,拖动，关联左侧的UILongPressGestureRecognizer对象。<br><div align="center"><img src="http://7xrmmr.com1.z0.glb.clouddn.com/tomys/Gesture3.gif" alt="添加手势图"><div>添加手势图</div></div><br>#### 4. 检查是否打开互动手势<br>&emsp;&emsp;本文以UIButton为例，UIButton默认互动手势是打开的，如果添加手势的对象是UIImageView或者UILable之类的控件，互动手势（User Interaction Enabled）默认是关闭的，需要用户设置打开。<br><div align="center"><img src="http://7xrmmr.com1.z0.glb.clouddn.com/tomys/Gesture4.jpg" alt="添加手势图"><div>添加手势图</div></div>]]></content>
+<div align="center"><img src="http://7xrmmr.com1.z0.glb.clouddn.com/tomys/Gesture1.gif" alt="添加手势图"><div>添加手势图</div></div>
+
+<h4 id="2-添加手势Action"><a href="#2-添加手势Action" class="headerlink" title="2. 添加手势Action"></a>2. 添加手势Action</h4><p>&emsp;&emsp;在Xcode中打开<code>辅助编辑器</code>;选中刚才添加的UILongPressGestureRecognizer，按住Control键的同时，拖动UILongPressGestureRecognizer到代码页面;在弹出的提示框中选择<code>Connection</code>为Action，<code>type</code>为UILongPressGestureRecognizer，填写<code>name</code>，点击<code>Connect</code>;</p>
+<div align="center"><img src="http://7xrmmr.com1.z0.glb.clouddn.com/tomys/Gesture2.gif" alt="添加手势图"><div>添加手势图</div></div>
+
+<h4 id="3-关联手势和控件"><a href="#3-关联手势和控件" class="headerlink" title="3. 关联手势和控件"></a>3. 关联手势和控件</h4><p>&emsp;&emsp;在Xcode中点击要添加手势的控件，打开<code>连接检查器</code>;选中<code>gestureRecognizes</code>右边的小圆圈（会变成+号）,拖动，关联左侧的UILongPressGestureRecognizer对象。</p>
+<div align="center"><img src="http://7xrmmr.com1.z0.glb.clouddn.com/tomys/Gesture3.gif" alt="添加手势图"><div>添加手势图</div></div>
+
+<h4 id="4-检查是否打开互动手势"><a href="#4-检查是否打开互动手势" class="headerlink" title="4. 检查是否打开互动手势"></a>4. 检查是否打开互动手势</h4><p>&emsp;&emsp;本文以UIButton为例，UIButton默认互动手势是打开的，如果添加手势的对象是UIImageView或者UILable之类的控件，互动手势（User Interaction Enabled）默认是关闭的，需要用户设置打开。</p>
+<div align="center"><img src="http://7xrmmr.com1.z0.glb.clouddn.com/tomys/Gesture4.jpg" alt="添加手势图"><div>添加手势图</div></div>]]></content>
     </entry>
     
     <entry>
