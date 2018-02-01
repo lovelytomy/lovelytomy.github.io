@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="">
+  <head>
+    <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+  <meta name="description" content="iOS｜使用故事板（storyboards）添加手势">
+
+
+
+
+  <meta name="keywords" content="iOS,">
+
+
+
+
+  <link rel="alternate" href="/use `atom.xml`" title="tomy’s  little world">
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/tutu.jpg?v=2.1.0">
+
+
+
+<link rel="canonical" href="http://tomys.win/2018/02/01/ iOS使用故事板（storyboards）添加手势/">
+
+
+<meta name="description" content="&amp;emsp;&amp;emsp;以前一直用代码添加手势，最近开始学习Sam Lu’s 100 Days of Swift 项目，顺便熟悉故事板的使用，发现UIButton添加手势方法并不像添加点击事件那么简单">
+<meta property="og:type" content="article">
+<meta property="og:title" content="iOS｜使用故事板（storyboards）添加手势">
+<meta property="og:url" content="http://tomys.win/2018/02/01/ iOS使用故事板（storyboards）添加手势/index.html">
+<meta property="og:site_name" content="tomy’s  little world">
+<meta property="og:description" content="&amp;emsp;&amp;emsp;以前一直用代码添加手势，最近开始学习Sam Lu’s 100 Days of Swift 项目，顺便熟悉故事板的使用，发现UIButton添加手势方法并不像添加点击事件那么简单">
+<meta property="og:image" content="http://7xrmmr.com1.z0.glb.clouddn.com/tomys/Gesture1.gif">
+<meta property="og:image" content="http://7xrmmr.com1.z0.glb.clouddn.com/tomys/Gesture2.gif">
+<meta property="og:image" content="http://7xrmmr.com1.z0.glb.clouddn.com/tomys/Gesture3.gif">
+<meta property="og:image" content="http://7xrmmr.com1.z0.glb.clouddn.com/tomys/Gesture4.jpg">
+<meta property="og:updated_time" content="2018-02-01T00:46:00.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="iOS｜使用故事板（storyboards）添加手势">
+<meta name="twitter:description" content="&amp;emsp;&amp;emsp;以前一直用代码添加手势，最近开始学习Sam Lu’s 100 Days of Swift 项目，顺便熟悉故事板的使用，发现UIButton添加手势方法并不像添加点击事件那么简单">
+<meta name="twitter:image" content="http://7xrmmr.com1.z0.glb.clouddn.com/tomys/Gesture1.gif">
+
+
+<link rel="stylesheet" type="text/css" href="/css/style.css?v=2.1.0">
+
+
+
+  <link rel="stylesheet" type="text/css" href="/lib/fancybox/jquery.fancybox.css">
+
+
+
+
+  
+
+
+
+    <title> iOS｜使用故事板（storyboards）添加手势 · tomy’s  little world </title>
+  </head>
+
+  <body>
+    <div class="container">
+      <header id="header" class="header"><div class="logo-wrapper">
+  <a href="/." class="logo">tomy’s  little world</a>
+</div>
+
+<nav class="site-nav">
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item">
+          <a class="menu-item-link" href="/">
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item">
+          <a class="menu-item-link" href="/archives/">
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item">
+          <a class="menu-item-link" href="/tags">
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item">
+          <a class="menu-item-link" href="/categories">
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item">
+          <a class="menu-item-link" href="/about">
+            关于
+          </a>
+        </li>
+      
+      
+        <li class="menu-search">
+          <form>
+            <i class="iconfont icon-search" id="open-search"></i>
+            <input type="text" class="search-input" id="search-input">
+            <i class="iconfont icon-close" id="close-search"></i>
+          </form>
+        </li>
+      
+    </ul>
+  
+</nav>
+
+<div class="mobile-navbar">
+  <div class="mobile-header">
+    <div class="mobile-header-logo">
+      <a href="/." class="logo">tomy’s  little world</a>
+    </div>
+
+    <div class="mobile-header-icon">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </div>
+  <nav class="mobile-menu">
+    
+      
+      <a class="mobile-menu-item" href="/">
+        首页
+      </a>
+    
+      
+      <a class="mobile-menu-item" href="/archives/">
+        归档
+      </a>
+    
+      
+      <a class="mobile-menu-item" href="/tags">
+        标签
+      </a>
+    
+      
+      <a class="mobile-menu-item" href="/categories">
+        分类
+      </a>
+    
+      
+      <a class="mobile-menu-item" href="/about">
+        关于
+      </a>
+    
+  </nav>
+</div>
+      </header>
+
+      <main id="main" class="main">
+        <div class="content-wrapper">
+          <div id="content" class="content">
+            
+  
+  <article class="post">
+    <header class="post-header">
+      <h1 class="post-title">
+        
+          iOS｜使用故事板（storyboards）添加手势
+        
+      </h1>
+
+      <div class="post-meta">
+        <span class="post-time">
+          2018年2月1日
+        </span>
+      </div>
+    </header>
+
+    
+      <div class="post-toc" id="post-toc">
+        <h2 class="post-toc-title">文章目录</h2>
+        <div class="post-toc-content">
+          <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-添加手势"><span class="toc-text">1. 添加手势</span></a></li></ol>
+        </div>
+      </div>
+    
+
+    <div class="post-content">
+      
+        <p>&emsp;&emsp;以前一直用代码添加手势，最近开始学习<a href="http://samvlu.com/index.html" target="_blank" rel="external">Sam Lu’s 100 Days of Swift</a> 项目，顺便熟悉故事板的使用，发现UIButton添加手势方法并不像添加点击事件那么简单<br>   <a id="more"></a></p>
+<h4 id="1-添加手势"><a href="#1-添加手势" class="headerlink" title="1. 添加手势"></a>1. 添加手势</h4><p>&emsp;&emsp;在Xcode<code>库面板</code>的<code>对象库</code>底部的搜索框中输入手势名称：（如UILongPressGestureRecognizer直接输入long），选择手势库对象，拖动到故事板ViewControllerScene底部。</p>
+<div align="center"><img src="http://7xrmmr.com1.z0.glb.clouddn.com/tomys/Gesture1.gif" alt="添加手势图"><div>添加手势图</div></div><br>#### 2. 添加手势Action<br>&emsp;&emsp;在Xcode中打开<code>辅助编辑器</code>;选中刚才添加的UILongPressGestureRecognizer，按住Control键的同时，拖动UILongPressGestureRecognizer到代码页面;在弹出的提示框中选择<code>Connection</code>为Action，<code>type</code>为UILongPressGestureRecognizer，填写<code>name</code>，点击<code>Connect</code>;<br><div align="center"><img src="http://7xrmmr.com1.z0.glb.clouddn.com/tomys/Gesture2.gif" alt="添加手势图"><div>添加手势图</div></div><br>#### 3. 关联手势和控件<br>&emsp;&emsp;在Xcode中点击要添加手势的控件，打开<code>连接检查器</code>;选中<code>gestureRecognizes</code>右边的小圆圈（会变成+号）,拖动，关联左侧的UILongPressGestureRecognizer对象。<br><div align="center"><img src="http://7xrmmr.com1.z0.glb.clouddn.com/tomys/Gesture3.gif" alt="添加手势图"><div>添加手势图</div></div><br>#### 4. 检查是否打开互动手势<br>&emsp;&emsp;本文以UIButton为例，UIButton默认互动手势是打开的，如果添加手势的对象是UIImageView或者UILable之类的控件，互动手势（User Interaction Enabled）默认是关闭的，需要用户设置打开。<br><div align="center"><img src="http://7xrmmr.com1.z0.glb.clouddn.com/tomys/Gesture4.jpg" alt="添加手势图"><div>添加手势图</div></div>
+      
+    </div>
+
+    
+      <footer class="post-footer">
+        <div class="post-tags">
+          
+            <a href="/tags/iOS/">iOS</a>
+          
+        </div>
+
+        
+  <nav class="post-nav">
+    
+    
+      <a class="next" href="/2018/01/14/echarts3折线图使用1/">
+        <span class="next-text nav-default">html｜echarts3折线图使用1</span>
+        <span class="prev-text nav-mobile">下一篇</span>
+        <i class="iconfont icon-right"></i>
+      </a>
+    
+  </nav>
+
+      </footer>
+    
+  </article>
+
+
+          </div>
+          
+  <div class="comments" id="comments">
+    
+      <div id="disqus_thread">
+        <noscript>
+          Please enable JavaScript to view the
+          <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a>
+        </noscript>
+      </div>
+    
+  </div>
+
+        </div>  
+      </main>
+
+      <footer id="footer" class="footer">
+  <div class="social-links">
+    
+      
+        
+          <a href="mailto:535303865@qq.com" class="iconfont icon-email" title="email"></a>
+        
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+        
+          <a href="http://weibo.com/tomytianqi" class="iconfont icon-weibo" title="weibo"></a>
+        
+      
+    
+      
+    
+    
+    
+      <a href="/use `atom.xml`" class="iconfont icon-rss" title="rss"></a>
+    
+  </div>
+
+
+<div class="copyright">
+  <span class="power-by">
+    由 <a class="hexo-link" href="https://hexo.io/">Hexo</a> 强力驱动
+  </span>
+  
+  <span class="theme-info">
+    主题 - 
+    <a class="theme-link" href="https://github.com/ahonn/hexo-theme-even">Even</a>
+  </span>
+
+  <span class="copyright-year">
+    
+    &copy; 
+     
+      2016 - 
+    
+    2018
+
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">tomy</span>
+  </span>
+</div>
+      </footer>
+
+      <div class="back-to-top" id="back-to-top">
+        <i class="iconfont icon-up"></i>
+      </div>
+    </div>
+
+    
+
+  <script type="text/javascript">
+    var disqus_config = function () {
+        this.page.url = 'http://tomys.win/2018/02/01/ iOS使用故事板（storyboards）添加手势/';
+        this.page.identifier = '2018/02/01/ iOS使用故事板（storyboards）添加手势/';
+        this.page.title = 'iOS｜使用故事板（storyboards）添加手势';
+    };
+    (function() {
+    var d = document, s = d.createElement('script');
+
+    s.src = '//tomy.disqus.com/embed.js';
+
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+    })();  
+  </script>
+
+
+    
+  
+
+
+
+
+
+  
+    <script type="text/javascript" src="/lib/jquery/jquery-3.1.1.min.js"></script>
+  
+
+  
+    <script type="text/javascript" src="/lib/fancybox/jquery.fancybox.pack.js"></script>
+  
+
+    <script type="text/javascript" src="/js/src/even.js?v=2.1.0"></script>
+<script type="text/javascript" src="/js/src/bootstrap.js?v=2.1.0"></script>
+
+  </body>
+</html>
