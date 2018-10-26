@@ -165,48 +165,6 @@
     <header class="post-header">
       <h1 class="post-title">
         
-          <a class="post-link" href="/2016/05/16/groupSummary160515/">群讨论整理160515</a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <span class="post-time">
-          2016年5月15日
-        </span>
-      </div>
-    </header>
-
-    
-
-    <div class="post-content">
-      
-        
-          
-        
-
-        
-          <ul>
-<li>记录了群里2016-05-09至2016-05-15讨论的一些问题，如有错误还望告知。</li>
-</ul>
-<h5 id="1-怎样获取ipa的Image-Assets中的图片素材。"><a href="#1-怎样获取ipa的Image-Assets中的图片素材。" class="headerlink" title="1. 怎样获取ipa的Image Assets中的图片素材。"></a>1. 怎样获取ipa的Image Assets中的图片素材。</h5><ul>
-<li>问题描述：获取ipa的图片素材, 包内容中图片特别少,  大部分都是nib结尾的文件, 怎么才能获取全部的图片呢</li>
-<li>问题解决：<br><code>工具1</code>:参考简书文章<a href="http://www.jianshu.com/p/1b817affc305">（iOS）仿App第一步：获取App素材</a>；<br><code>工具2</code>:github中有一个开源的获取Image Assets图片工具<a href="https://github.com/devcxm/iOS-Images-Extractor">devcxm/iOS-Images-Extractor</a>
-          <div class="read-more">
-            <a href="/2016/05/16/groupSummary160515/" class="read-more-link">更多…</a>
-          </div>
-        
-      
-    </li></ul></div>
-
-    
-  </article>
-
-    
-      
-  <article class="post">
-    <header class="post-header">
-      <h1 class="post-title">
-        
           <a class="post-link" href="/2016/04/26/UIAlertView4KeyBoard/">iOS8＋ UIAlertView pop/push页面后，键盘闪一下的问题</a>
         
       </h1>
@@ -304,18 +262,13 @@
         
 
         
-          <ul>
-<li>记录了群里2016-05-09至2016-05-15讨论的一些问题，如有错误还望告知。</li>
-</ul>
-<h5 id="1-怎样获取ipa的Image-Assets中的图片素材。"><a href="#1-怎样获取ipa的Image-Assets中的图片素材。" class="headerlink" title="1. 怎样获取ipa的Image Assets中的图片素材。"></a>1. 怎样获取ipa的Image Assets中的图片素材。</h5><ul>
-<li>问题描述：获取ipa的图片素材, 包内容中图片特别少,  大部分都是nib结尾的文件, 怎么才能获取全部的图片呢</li>
-<li>问题解决：<br><code>工具1</code>:参考简书文章<a href="http://www.jianshu.com/p/1b817affc305">（iOS）仿App第一步：获取App素材</a>；<br><code>工具2</code>:github中有一个开源的获取Image Assets图片工具<a href="https://github.com/devcxm/iOS-Images-Extractor">devcxm/iOS-Images-Extractor</a>
+          <h4 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h4><p>   <code>如果当前页面有UITextField时使用UIAlertView，在pop或者push时，在新的页面键盘会弹出一下，再收回。</code>这个问题困扰了我很久，一开始没意识到这是iOS8系统以后导致的问题，因为当时接手这个项目的时候刚刚发布iOS8没多久，我的测试机还是iOS7，没有这个问题，只是在同事iOS8的手机上能见到，当时以为只是偶发现象觉得不严重也就没去处理。现在应用做扩展升级，发现这个问题几乎每个机子上都会发生，大部分的机子现在都是iOS8+和iOS9+。下午没事儿就想把这个由来已久的问题解决一下。网上搜到了导致这个现象的原因：<code>在ios8以后，苹果提倡使用UIAlertController而非UIAlertView,键盘收回动作需要0.25s的时间，而UIAlertView弹出是阻碍了键盘的收回动作。</code><br>由于目前应用还是要支持iOS7+所以不能全部换成UIAlertController，只好用一下折中的办法。<br>
           <div class="read-more">
             <a href="/2016/03/08/iOSTools/" class="read-more-link">更多…</a>
           </div>
         
       
-    </li></ul></div>
+    </p></div>
 
     
   </article>
